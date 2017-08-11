@@ -1,0 +1,21 @@
+# this file specifies which particular warnings should be suppressed. The rules will
+# still be executed, but warnings are intercepted if they match this file.
+# 
+# format:
+#    sourcefile|rule|linenumbers
+#    sourcefile|_file-size|size
+#
+# sourcefile : spell exactly as it appears in "Prolint result window"
+# rule       : identfier of the rule that gives the warning
+# linenumbers: comma separated list of linenumbers where the warning should be suppressed
+#
+# size : the filesize of the sourcefile, in bytes
+# if _file-size is not specified, or if size doesn't match the actual size of the sourcefile,
+# all lines for sourcefile will be invalid. So after you edit a sourcefile no warnings will be suppressed.
+#
+# empty lines or lines matching #* are ignored
+
+
+prolint/demo/runname.i|_file-size|1411
+prolint/demo/runname.i|runname|19
+

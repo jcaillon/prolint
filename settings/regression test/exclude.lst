@@ -1,0 +1,21 @@
+# this file specifies which particular warnings should be excluded. The rules will
+# still be executed, but warnings are intercepted if they match this file.
+# You can also consider using {&_proparse_ prolint-nowarn(ruleid,ruleid)} directives
+# 
+# format:
+#    sourcefile|rules
+#
+# sourcefile : spell exactly as it appears in "Prolint result window", wildcards are accepted. CAN-DO rules apply
+# rule       : comma separated list of identifiers of the rules that gives the warning, 
+#              wildcards are accepted. CAN-DO rules apply
+#
+# empty lines or lines matching #* are ignored
+
+
+# just for fun: ignore everything from ifindent.i except ifindent1 and ifindent2
+prolint/regrtest/ifindent.i|!ifindent*,*
+
+# ignore CVS backups of 'work in progress' files:
+prolint/*CVS/*|*
+
+

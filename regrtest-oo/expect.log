@@ -1,0 +1,72 @@
+rule=abbrevkwd; source=prolint/regrtest-oo/test5.cls; line=   3; descr=Abbreviated char for CHARACTER
+rule=allfinds; source=prolint/regrtest-oo/test2.cls; line=  14; descr=FIND FIRST salesrep statement included.
+rule=allfinds; source=prolint/regrtest-oo/test3.cls; line=   8; descr=FIND FIRST salesrep statement included.
+rule=allfinds; source=prolint/regrtest-oo/test3.cls; line=  14; descr=FIND FIRST salesrep statement included.
+rule=allfinds; source=prolint/regrtest-oo/test3.cls; line=  22; descr=FIND FIRST salesrep statement included.
+rule=bufdbmeth; source=prolint/regrtest-oo/test2.cls; line=  14; descr=no buffer defined for table salesrep
+rule=bufdbmeth; source=prolint/regrtest-oo/test3.cls; line=  14; descr=no buffer defined for table salesrep
+rule=bufdbmeth; source=prolint/regrtest-oo/test3.cls; line=  22; descr=no buffer defined for table salesrep
+rule=emptyblock; source=prolint/regrtest-oo/test1.cls; line=   2; descr=Empty CLASS block
+rule=emptyblock; source=prolint/regrtest-oo/test6.cls; line=   6; descr=Empty METHOD block
+rule=endtype; source=prolint/regrtest-oo/test3.cls; line=  16; descr=Use END CONSTRUCTOR to terminate a constructor block
+rule=endtype; source=prolint/regrtest-oo/test3.cls; line=  23; descr=Use END DESTRUCTOR to terminate a destructor block
+rule=groupassign; source=prolint/regrtest-oo/test2.cls; line=  31; descr=Possibly group ASSIGN with line 30
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=   6; descr= VARIABLE abc CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=   7; descr= VARIABLE xyz CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=   9; descr=  mytest1  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=  12; descr= VARIABLE abc CHARACTER scope LOCAL  should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=  23; descr= VARIABLE datest1 TYPE_NAME scope LOCAL DoSomething should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=  24; descr= VARIABLE datest2 TYPE_NAME scope LOCAL DoSomething should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=  25; descr= VARIABLE datest3 CHARACTER scope LOCAL DoSomething should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test2.cls; line=  26; descr= VARIABLE datest4 INTEGER scope LOCAL DoSomething should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=   4; descr= VARIABLE dsDataset HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=   7; descr=  salesrep BUFFER scope LOCAL  should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=  19; descr= VARIABLE abc CHARACTER scope LOCAL  should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=  20; descr= VARIABLE dsDataset HANDLE scope LOCAL  should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=  25; descr=  tt  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=  28; descr=  ds  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest-oo/test3.cls; line=  31; descr= VARIABLE abc CHARACTER scope LOCAL attachDatasource should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test4.cls; line=   5; descr= VARIABLE cls TYPE_NAME scope LOCAL CloseView should start with "l"
+rule=nameconv; source=prolint/regrtest-oo/test5.cls; line=   3; descr=INPUT PARAMETER pcMessage  scope LOCAL Wait should start with "l"
+rule=nocomment; source=prolint/regrtest-oo/test3.cls; line=   6; descr=CONSTRUCTOR  is not commented
+rule=nocomment; source=prolint/regrtest-oo/test3.cls; line=  18; descr=DESTRUCTOR  is not commented
+rule=nocomment; source=prolint/regrtest-oo/test3.cls; line=  30; descr=method attachDatasource is not commented
+rule=nocomment; source=prolint/regrtest-oo/test4.cls; line=   3; descr=method CloseView is not commented
+rule=nocomment; source=prolint/regrtest-oo/test5.cls; line=   3; descr=method Wait is not commented
+rule=nocomment; source=prolint/regrtest-oo/test5.cls; line=   8; descr=method Generate is not commented
+rule=nocomment; source=prolint/regrtest-oo/test6.cls; line=   6; descr=method Foo is not commented
+rule=nolonglines; source=prolint/regrtest-oo/test3.cls; line=  13; descr=CONSTRUCTOR PUBLIC test3... line has more than 80 characters.
+rule=noundo; source=prolint/regrtest-oo/test2.cls; line=   9; descr=property 'mytest1' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest-oo/test4.cls; line=   5; descr=variable 'cls' defined without NO-UNDO
+rule=nowhere; source=prolint/regrtest-oo/test2.cls; line=  14; descr=no WHERE-clause on table salesrep
+rule=nowhere; source=prolint/regrtest-oo/test3.cls; line=   8; descr=no WHERE-clause on table salesrep
+rule=nowhere; source=prolint/regrtest-oo/test3.cls; line=  14; descr=no WHERE-clause on table salesrep
+rule=nowhere; source=prolint/regrtest-oo/test3.cls; line=  22; descr=no WHERE-clause on table salesrep
+rule=publicvar; source=prolint/regrtest-oo/test2.cls; line=   6; descr=replace public variable abc by property
+rule=runnotfound; source=prolint/regrtest-oo/test5.cls; line=   5; descr=proc 'hsgfh/hghchgsdvh/vxcgxdhdb.w' not found
+rule=strattrib; source=prolint/regrtest-oo/test3.cls; line=   9; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest-oo/test3.cls; line=  33; descr=no string attributes on 'AFTER-ROW-FILL'
+rule=strattrib; source=prolint/regrtest-oo/test3.cls; line=  33; descr=no string attributes on "FillMoreStuff"
+rule=strattrib; source=prolint/regrtest-oo/test5.cls; line=   4; descr=no string attributes on "GENERAL"
+rule=strattrib; source=prolint/regrtest-oo/test5.cls; line=   9; descr=no string attributes on "Busy..."
+rule=usingpkg; source=prolint/regrtest-oo/test6.cls; line=   2; descr=USING package, replace by USING type (without wildcards)
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=   6; descr=variable abc is never used
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=   7; descr=variable xyz is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=  12; descr=variable abc in Property_setter  hides object in program scope
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=  23; descr=variable datest1 is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=  24; descr=variable datest2 is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=  25; descr=variable datest3 is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test2.cls; line=  26; descr=variable datest4 is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  13; descr=parameter dsDataset in CONSTRUCTOR  hides object in program scope
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  13; descr=parameter dsDataset is never used
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  19; descr=variable abc in DESTRUCTOR  hides object inherited from superclass
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  19; descr=variable abc is never used
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  20; descr=variable dsDataset in DESTRUCTOR  hides object in program scope
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  20; descr=variable dsDataset is assigned but never accessed
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  31; descr=variable abc in method attachDatasource hides object inherited from superclass
+rule=varusage; source=prolint/regrtest-oo/test3.cls; line=  31; descr=variable abc is never used
+rule=varusage; source=prolint/regrtest-oo/test4.cls; line=   5; descr=variable cls is assigned but never accessed
+rule=wholeindex; source=prolint/regrtest-oo/test2.cls; line=  14; descr=WHOLE-INDEX found in xref on table Salesrep
+rule=wholeindex; source=prolint/regrtest-oo/test3.cls; line=   8; descr=WHOLE-INDEX found in xref on table Salesrep
+rule=wholeindex; source=prolint/regrtest-oo/test3.cls; line=  14; descr=WHOLE-INDEX found in xref on table Salesrep
+rule=wholeindex; source=prolint/regrtest-oo/test3.cls; line=  22; descr=WHOLE-INDEX found in xref on table Salesrep

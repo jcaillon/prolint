@@ -1,0 +1,956 @@
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=   5; descr=Abbreviated FORM for FORMAT
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=   9; descr=Abbreviated INIT for INITIAL
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=   9; descr=Abbreviated LOG for LOGICAL
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  12; descr=Abbreviated SUBST for SUBSTITUTE
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  13; descr=Abbreviated DISP for DISPLAY
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  28; descr=Abbreviated width-p for WIDTH-PIXELS
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  29; descr=Abbreviated height-c for HEIGHT-CHARS
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  43; descr=Abbreviated ASC for ASCENDING
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  46; descr=Abbreviated FORM for FORMAT
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  58; descr=Abbreviated BGCOL for BGCOLOR
+rule=abbrevkwd; source=prolint/regrtest/abbrevkwd.i; line=  61; descr=Abbreviated exclusive for EXCLUSIVE-LOCK
+rule=abbrevkwd; source=prolint/regrtest/defaultname.w; line= 267; descr=Abbreviated MOVE-AFTER for MOVE-AFTER-TAB-ITEM
+rule=abbrevkwd; source=prolint/regrtest/vardef.p; line=   6; descr=Abbreviated param for PARAMETER
+rule=abbrevkwd; source=prolint/regrtest/vardef.p; line=  11; descr=Abbreviated info for INFORMATION
+rule=abbrevkwd; source=prolint/regrtest/vardef.p; line=  23; descr=Abbreviated char for CHARACTER
+rule=abbrevkwd; source=prolint/regrtest/vardef.p; line=  25; descr=Abbreviated char for CHARACTER
+rule=abbrevkwd; source=prolint/regrtest/where-udf.i; line=   3; descr=Abbreviated CHAR for CHARACTER
+rule=abbrevkwd; source=prolint/regrtest/where-udf.i; line=   9; descr=Abbreviated CHAR for CHARACTER
+rule=abbrevtable; source=prolint/regrtest/abbrevkwd.i; line=  16; descr=Abbreviation of table Customer used (custome)
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=   1; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=  13; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=  16; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=  19; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=  20; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/ifindentextra.i; line=  24; descr=MESSAGE not an Alert Box
+rule=alertmessage; source=prolint/regrtest/message.i; line=   8; descr=MESSAGE not an Alert Box
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  14; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  16; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  18; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  20; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  22; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  24; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  26; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  28; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  30; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  32; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/andorparens.p; line=  34; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/findstate.i; line=   3; descr=FIND FIRST order statement included.
+rule=allfinds; source=prolint/regrtest/matches.p; line=  18; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/nowhere.i; line=   9; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/nowhere.i; line=  10; descr=FIND NEXT customer statement included.
+rule=allfinds; source=prolint/regrtest/nowhere.i; line=  19; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/oflink.i; line=   3; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/oflink.i; line=   5; descr=FIND FIRST order statement included.
+rule=allfinds; source=prolint/regrtest/oflink.i; line=  11; descr=CANFIND FIRST order statement included.
+rule=allfinds; source=prolint/regrtest/oflink.i; line=  13; descr=CANFIND FIRST order statement included.
+rule=allfinds; source=prolint/regrtest/release.p; line=   3; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  13; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  14; descr=FIND FIRST buf_cust statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  34; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  37; descr=FIND FIRST buf_cust statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  40; descr=FIND NEXT customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  44; descr=FIND NEXT customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  48; descr=FIND NEXT customer statement included.
+rule=allfinds; source=prolint/regrtest/sharelock.i; line=  53; descr=FIND LAST customer statement included.
+rule=allfinds; source=prolint/regrtest/tablename.p; line=  12; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/tablename.p; line=  19; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/use-index.i; line=   8; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/where-udf.i; line=   5; descr=FIND FIRST salesrep statement included.
+rule=allfinds; source=prolint/regrtest/wholeindex.i; line=  12; descr=FIND FIRST customer statement included.
+rule=allfinds; source=prolint/regrtest/wholeindex.i; line=  13; descr=FIND NEXT customer statement included.
+rule=allfinds; source=prolint/regrtest/wholeindex.i; line=  16; descr=FIND NEXT buf_customer statement included.
+rule=andorparens; source=prolint/regrtest/andorparens.p; line=  18; descr=mixed AND and OR - please use parentheses
+rule=andorparens; source=prolint/regrtest/andorparens.p; line=  20; descr=mixed AND and OR - please use parentheses
+rule=andorparens; source=prolint/regrtest/andorparens.p; line=  22; descr=mixed AND and OR - please use parentheses
+rule=andorparens; source=prolint/regrtest/andorparens.p; line=  24; descr=mixed AND and OR - please use parentheses
+rule=andorparens; source=prolint/regrtest/andorparens.p; line=  32; descr=mixed AND and OR - please use parentheses
+rule=backslash; source=prolint/regrtest/runname.i; line=  13; descr=backslash in filename 'subdir\ghhtf.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  14; descr=backslash in filename 'SubDir\Ghhtf.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  36; descr=backslash in filename 'SubDir\Shgchcg.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  37; descr=backslash in filename 'SubDir\Shgchcg.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  45; descr=backslash in filename 'SubDir\Shgchcg.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  46; descr=backslash in filename 'Another\Shgchcg.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/runname.i; line=  63; descr=backslash in string 'test\jhdgjah.p' (not Unix-compatible)
+rule=backslash; source=prolint/regrtest/streamclose.p; line=  15; descr=backslash in filename 'c:\temp\test1.txt' (not Unix-compatible)
+rule=blocklabel; source=prolint/regrtest/blocklabel.i; line=   6; descr=LEAVE should specify a blocklabel
+rule=blocklabel; source=prolint/regrtest/blocklabel.i; line=  18; descr=NEXT should specify a blocklabel
+rule=bufdbfunc; source=prolint/regrtest/where-udf.i; line=   5; descr=no buffer defined for table salesrep
+rule=bufdbproc; source=prolint/regrtest/defaultname.w; line= 411; descr=no buffer defined for table Customer
+rule=bufdbproc; source=prolint/regrtest/tablename.p; line=  19; descr=no buffer defined for table customer
+rule=bufdbproc; source=prolint/regrtest/varusage.i; line= 149; descr=no buffer defined for table customer
+rule=colon-t; source=prolint/regrtest/colon-t.i; line=   5; descr=attrib :T will trim "this is a "
+rule=colon-t; source=prolint/regrtest/colon-t.i; line=   6; descr=attrib :T will trim " test "
+rule=colon-t; source=prolint/regrtest/colon-t.i; line=   7; descr=attrib :T will trim ". "
+rule=colon-t; source=prolint/regrtest/substitute.i; line=  10; descr=attrib :T will trim "should "
+rule=colon-t; source=prolint/regrtest/substitute.i; line=  21; descr=attrib :T will trim "should "
+rule=defaultname; source=prolint/regrtest/defaultname.w; line=  96; descr=BUTTON-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 100; descr=COMBO-BOX-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 107; descr=EDITOR-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 111; descr=FILL-IN-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 116; descr=SELECT-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 120; descr=SLIDER-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 125; descr=TOGGLE-1 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/defaultname.w; line= 130; descr=FILL-IN-2 is no meaningfull widget name
+rule=defaultname; source=prolint/regrtest/test3.p; line=   4; descr=RADIO-SET-2 is no meaningfull widget name
+rule=do1; source=prolint/regrtest/do1.i; line=  14; descr="DO:" contains only one statement
+rule=do1; source=prolint/regrtest/do1.i; line=  20; descr="DO:" contains only one statement
+rule=do1; source=prolint/regrtest/do1.i; line=  54; descr="DO:" contains only one statement
+rule=do1; source=prolint/regrtest/ifindentpreproc.i; line=   1; descr="DO:" contains only one statement
+rule=dotcomment; source=prolint/regrtest/dotcomment.i; line=   6; descr=PERIOD comments a statement
+rule=dotcomment; source=prolint/regrtest/dotcomment.i; line=  16; descr=PERIOD comments a statement
+rule=dotcomment; source=prolint/regrtest/dotcomment.i; line=  19; descr=PERIOD comments a statement
+rule=dotcomment; source=prolint/regrtest/dotcomment.i; line=  23; descr=PERIOD comments a statement
+rule=emptyblock; source=prolint/regrtest/abbrevkwd.i; line=  61; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/blocklabel.i; line=  36; descr=Empty DO block
+rule=emptyblock; source=prolint/regrtest/nocomment.i; line= 114; descr=Empty PROCEDURE block
+rule=emptyblock; source=prolint/regrtest/nocomment.i; line= 114; descr=Empty PROCEDURE block
+rule=emptyblock; source=prolint/regrtest/nocomment.i; line= 121; descr=Empty PROCEDURE block
+rule=emptyblock; source=prolint/regrtest/nocomment.i; line= 121; descr=Empty PROCEDURE block
+rule=emptyblock; source=prolint/regrtest/nowhere.i; line=  15; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/nowhere.i; line=  23; descr=Empty DO block
+rule=emptyblock; source=prolint/regrtest/oflink.i; line=   7; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/sortaccess.i; line=   5; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/tablename.p; line=   2; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/vardef.p; line=  22; descr=Empty FUNCTION block
+rule=emptyblock; source=prolint/regrtest/where-udf.i; line=  15; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/where-udf.i; line=  19; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/where-udf.i; line=  23; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/where-udf.i; line=  27; descr=Empty FOR block
+rule=emptyblock; source=prolint/regrtest/wholeindex.i; line=  24; descr=Empty FOR block
+rule=endtype; source=prolint/regrtest/ifindentextra.i; line=  21; descr=Use END CASE to terminate a case block
+rule=endtype; source=prolint/regrtest/noeffect.i; line=  12; descr=Use END FUNCTION to terminate a function block
+rule=endtype; source=prolint/regrtest/noundo.i; line=  25; descr=Use END PROCEDURE to terminate a procedure block
+rule=endtype; source=prolint/regrtest/noundo.i; line=  31; descr=Use END PROCEDURE to terminate a procedure block
+rule=endtype; source=prolint/regrtest/noundo.i; line=  60; descr=Use END PROCEDURE to terminate a procedure block
+rule=findstate-tt; source=prolint/regrtest/findstate-tt.p; line=   6; descr=FIND ttAccount statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=findstate-tt; source=prolint/regrtest/nowhere.i; line=  12; descr=FIND tt_nowhere statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=findstate-tt; source=prolint/regrtest/wholeindex.i; line=  18; descr=FIND tt_wholeindex statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=findstate-tt; source=prolint/regrtest/wholeindex.i; line=  21; descr=FIND buf_wholeindex statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=findstate; source=prolint/regrtest/findstate.i; line=  18; descr=FIND testtable1 statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=findstate; source=prolint/regrtest/wholeindex.i; line=  15; descr=FIND buf_customer statement defined without qualifer [ FIRST | LAST | NEXT | PREV | CURRENT ]
+rule=fnusage; source=prolint/regrtest/sharelock.p; line=   1; descr=PRIVATE Function GetBinaryFileFromResponse() is not called in current program
+rule=fnusage; source=prolint/regrtest/varusage.i; line= 114; descr=External Function udf_varusage_2() is prototyped but not called in current program
+rule=groupassign; source=prolint/regrtest/abbrevkwd.i; line=  31; descr=Possibly group ASSIGN with line 27
+rule=groupassign; source=prolint/regrtest/abbrevkwd.i; line=  37; descr=Possibly group ASSIGN with line 27
+rule=groupassign; source=prolint/regrtest/abbrevkwd.i; line=  40; descr=Possibly group ASSIGN with line 27
+rule=groupassign; source=prolint/regrtest/abbrevkwd.i; line=  58; descr=Possibly group ASSIGN with line 57
+rule=groupassign; source=prolint/regrtest/colon-t.i; line=   6; descr=Possibly group ASSIGN with line 5
+rule=groupassign; source=prolint/regrtest/colon-t.i; line=   7; descr=Possibly group ASSIGN with line 5
+rule=groupassign; source=prolint/regrtest/do1.i; line=  26; descr=Possibly group ASSIGN with line 25
+rule=groupassign; source=prolint/regrtest/do1.i; line=  33; descr=Possibly group ASSIGN with line 32
+rule=groupassign; source=prolint/regrtest/i18nlength.i; line=  11; descr=Possibly group ASSIGN with line 9
+rule=groupassign; source=prolint/regrtest/i18nlength.i; line=  12; descr=Possibly group ASSIGN with line 9
+rule=groupassign; source=prolint/regrtest/i18nlength.i; line=  13; descr=Possibly group ASSIGN with line 9
+rule=groupassign; source=prolint/regrtest/i18nlength.i; line=  14; descr=Possibly group ASSIGN with line 9
+rule=groupassign; source=prolint/regrtest/i18nlength.i; line=  21; descr=Possibly group ASSIGN with line 18
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  12; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  14; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  16; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  18; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  20; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  25; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/ifparens.p; line=  31; descr=Possibly group ASSIGN with line 7
+rule=groupassign; source=prolint/regrtest/noeffect.i; line=  15; descr=Possibly group ASSIGN with line 14
+rule=groupassign; source=prolint/regrtest/substitute.i; line=  51; descr=Possibly group ASSIGN with line 42
+rule=groupassign; source=prolint/regrtest/substitute.i; line=  60; descr=Possibly group ASSIGN with line 42
+rule=groupassign; source=prolint/regrtest/substitute.i; line=  62; descr=Possibly group ASSIGN with line 42
+rule=groupassign; source=prolint/regrtest/varusage.i; line=  26; descr=Possibly group ASSIGN with line 25
+rule=groupassign; source=prolint/regrtest/varusage.i; line= 154; descr=Possibly group ASSIGN with line 153
+rule=i18nlength; source=prolint/regrtest/i18nlength.i; line=  11; descr=LENGTH function called without TYPE parameter
+rule=i18nlength; source=prolint/regrtest/i18nlength.i; line=  22; descr=LENGTH function called without TYPE parameter
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=   5; descr=name of variable 'X' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=   8; descr=name of parameter 'ERROR' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  11; descr=name of parameter 'HWND' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  12; descr=name of parameter 'CODE' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  13; descr=name of parameter 'ERROR' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  16; descr=name of temp-table 'OBJECT' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  17; descr=name of fields 'CODE' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  18; descr=name of fields 'WIDTH' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  19; descr=name of fields 'LENGTH' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  22; descr=name of index 'key' is a keyword
+rule=idiskeyword; source=prolint/regrtest/idiskeyword.p; line=  25; descr=name of buffer 'border-b' is a keyword
+rule=idiskeyword; source=prolint/regrtest/vardef.p; line=   8; descr=name of variable 'Name' is a keyword
+rule=ifindent1; source=prolint/regrtest/dotcomment.i; line=  24; descr=#101: Node MESSAGE has greater indent than IF on line 22. Expected to be 0, is 3.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  27; descr=#101: Node IF has greater indent than IF on line 25. Expected to be 0, is 2.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  28; descr=#102: More indent expected for node ELSE. Node's indent should be at least 2, is 0.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  44; descr=#101: Node vd2 has greater indent than IF on line 42. Expected to be 0, is 4.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  50; descr=#101: Node y1 has greater indent than IF on line 47. Expected to be 0, is 4.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  71; descr=#102: More indent expected for node ASSIGN. Node's indent should be at least 9, is 2.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  78; descr=#101: Node i2 has greater indent than IF on line 75. Expected to be 0, is 15.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line=  87; descr=#101: Node i2 has greater indent than IF on line 85. Expected to be 2, is 17.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 124; descr=#101: Node IF has greater indent than IF on line 121. Expected to be 0, is 8.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 125; descr=#102: More indent expected for node assign. Node's indent should be at least 8, is 3.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 151; descr=#101: Node IF has greater indent than IF on line 144. Expected to be 0, is 2.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 173; descr=#102: More indent expected for node END. Node's indent should be at least 1, is 0.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 211; descr=#102: More indent expected for node CREATE. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 212; descr=#102: More indent expected for node ASSIGN. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 224; descr=#101: Node END has greater indent than IF on line 222. Expected to be 1, is 4.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 239; descr=#102: More indent expected for node c. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 252; descr=#102: More indent expected for node c. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 320; descr=#102: More indent expected for node RUN. Node's indent should be at least 20, is 7.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 322; descr=#102: More indent expected for node RUN. Node's indent should be at least 21, is 7.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 348; descr=#102: More indent expected for node CREATE. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 349; descr=#102: More indent expected for node ASSIGN. Node's indent should be at least 4, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 364; descr=#101: Node END has greater indent than IF on line 362. Expected to be 1, is 4.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 405; descr=#101: Node IF has greater indent than IF on line 398. Expected to be 0, is 1.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 426; descr=#102: More indent expected for node THEN. Node's indent should be at least 8, is 6.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 427; descr=#102: More indent expected for node ELSE. Node's indent should be at least 8, is 6.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 476; descr=#102: More indent expected for node ELSE. Node's indent should be at least 9, is 0.
+rule=ifindent1; source=prolint/regrtest/ifindent.i; line= 478; descr=#102: More indent expected for node END. Node's indent should be at least 9, is 0.
+rule=ifindent1; source=prolint/regrtest/ifindentextra.i; line=  18; descr=#101: Node CASE has greater indent than IF on line 16. Expected to be 0, is 3.
+rule=ifindent1; source=prolint/regrtest/ifindentextra.i; line=  26; descr=#101: Node . has greater indent than IF on line 26. Expected to be 32, is 56.
+rule=ifindent1; source=prolint/regrtest/ifindentextra.i; line=  26; descr=#101: Node IF has greater indent than IF on line 24. Expected to be 6, is 32.
+rule=ifindent1; source=prolint/regrtest/ifindentextra.i; line=  28; descr=#101: Node . has greater indent than IF on line 28. Expected to be 57, is 82.
+rule=ifindent1; source=prolint/regrtest/ifindentextra.i; line=  38; descr=#101: Node IF has greater indent than IF on line 36. Expected to be 0, is 33.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line=  32; descr=#202: Node IF has less indent than IF on line 27. Expected to be 2, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line=  95; descr=#202: Node UPDATE has less indent than IF on line 89. Expected to be 22, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 128; descr=#202: Node IF has less indent than IF on line 124. Expected to be 8, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 169; descr=#202: Node IF has less indent than IF on line 151. Expected to be 2, is 1.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 175; descr=#202: Node IF has less indent than IF on line 169. Expected to be 1, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 193; descr=#202: Node find has less indent than IF on line 187. Expected to be 2, is 1.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 398; descr=#202: Node IF has less indent than IF on line 389. Expected to be 2, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 408; descr=#202: Node FOR has less indent than IF on line 405. Expected to be 1, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 428; descr=#202: Node ELSE has less indent than IF on line 425. Expected to be 8, is 3.
+rule=ifindent2; source=prolint/regrtest/ifindent.i; line= 472; descr=#202: Node IF has less indent than IF on line 463. Expected to be 5, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindentextra.i; line=  16; descr=#202: Node IF has less indent than IF on line 10. Expected to be 2, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindentextra.i; line=  33; descr=#202: Node IF has less indent than IF on line 30. Expected to be 15, is 1.
+rule=ifindent2; source=prolint/regrtest/ifindentextra.i; line=  36; descr=#202: Node IF has less indent than IF on line 33. Expected to be 1, is 0.
+rule=ifindent2; source=prolint/regrtest/ifindentextra.i; line=  40; descr=#202: Node IF has less indent than IF on line 38. Expected to be 33, is 2.
+rule=ifparens; source=prolint/regrtest/ifparens.p; line=   7; descr=IF function is confusing, use parentheses
+rule=ifparens; source=prolint/regrtest/ifparens.p; line=  20; descr=IF function is confusing, use parentheses
+rule=ifparens; source=prolint/regrtest/ifparens.p; line=  25; descr=IF function is confusing, use parentheses
+rule=inclowercase; source=prolint/regrtest/test.p; line=  22; descr=Compile will fail on Unix, use only lower-case includefiles: Prolint/Regrtest/Message.i
+rule=inclowercase; source=prolint/regrtest/test.p; line=  30; descr=Compile will fail on Unix, use only lower-case includefiles: prolint/regrtest/SortAccess.i
+rule=inclowercase; source=prolint/regrtest/test.p; line=  32; descr=Compile will fail on Unix, use only lower-case includefiles: prolint/regrtest/RunName.i
+rule=incslash; source=prolint/regrtest/test.p; line=  35; descr=Compile will fail on Unix, don't use backslash in includefiles: prolint\regrtest\shared.i
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  21; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  21; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  38; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  38; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  48; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  48; descr=PROCEDURE block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  54; descr=FUNCTION block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  54; descr=FUNCTION block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  62; descr=FUNCTION block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/nocomment.i; line=  62; descr=FUNCTION block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/undoretry.p; line=   4; descr=DO block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/undoretry.p; line=  21; descr=DO block header should terminate with a COLON
+rule=lexcolon; source=prolint/regrtest/vardef.p; line=  22; descr=FUNCTION block header should terminate with a COLON
+rule=matches; source=prolint/regrtest/matches.p; line=  18; descr=MATCHES statement used in this program
+rule=maxchar; source=prolint/regrtest/test4.p; line=   6; descr=String constant too long for Tranman (max 188)
+rule=message; source=prolint/regrtest/dotcomment.i; line=  11; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/dotcomment.i; line=  13; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/dotcomment.i; line=  14; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/dotcomment.i; line=  24; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=   1; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=  13; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=  16; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=  19; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=  20; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/ifindentextra.i; line=  24; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/message.i; line=   6; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/message.i; line=   8; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/strattrib.i; line=  51; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/strattrib.i; line=  55; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/strattrib.i; line=  60; descr=use MESSAGE only in debug-mode
+rule=message; source=prolint/regrtest/vardef.p; line=  10; descr=use MESSAGE only in debug-mode
+rule=messagetype; source=prolint/regrtest/defaultname.w; line= 364; descr=ALERT BOX is missing alert type
+rule=messagetype; source=prolint/regrtest/dotcomment.i; line=  11; descr=ALERT BOX is missing alert type
+rule=messagetype; source=prolint/regrtest/dotcomment.i; line=  13; descr=ALERT BOX is missing alert type
+rule=messagetype; source=prolint/regrtest/dotcomment.i; line=  14; descr=ALERT BOX is missing alert type
+rule=messagetype; source=prolint/regrtest/message.i; line=   6; descr=ALERT BOX is missing alert type
+rule=messagetype; source=prolint/regrtest/message.i; line=  11; descr=ALERT BOX is missing alert type
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=   4; descr= VARIABLE abbrev1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=   5; descr= VARIABLE abbrev2 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=   6; descr= VARIABLE abbrev3 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=   9; descr= VARIABLE abbrev4 LOGICAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  19; descr=  btn_abbrevkwd  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  20; descr=  FRAME-Abbrevkwd  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  41; descr=  ttabbrev  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  46; descr= VARIABLE abbrev5 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  55; descr= VARIABLE chAbbrevkwd COMHANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/abbrevkwd.i; line=  56; descr= VARIABLE hbAbbrevkwd HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/blocklabel.i; line=  35; descr= VARIABLE hwBlocklabel WIDGETHANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/colon-t.i; line=   3; descr= VARIABLE colont CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/defaultname.w; line= 348; descr= VARIABLE UIB_S LOGICAL scope LOCAL control_load should start with "l"
+rule=nameconv; source=prolint/regrtest/defaultname.w; line= 349; descr= VARIABLE OCXFile CHARACTER scope LOCAL control_load should start with "l"
+rule=nameconv; source=prolint/regrtest/do1.i; line=   3; descr= VARIABLE do1_1 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/do1.i; line=   4; descr= VARIABLE do1_2 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/dotcomment.i; line=   4; descr= VARIABLE dotcomment DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/findstate-tt.p; line=   2; descr=  ttAccount  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/findstate.i; line=   9; descr= VARIABLE v LOGICAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/i18nlength.i; line=   5; descr= VARIABLE i18nlength_1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/i18nlength.i; line=   6; descr= VARIABLE i18nlength_2 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=   5; descr= VARIABLE X DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=   5; descr=X in  is a Progress keyword
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=   7; descr= VARIABLE hh COMHANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=   8; descr=ERROR in  is a Progress keyword
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=   8; descr=OUTPUT PARAMETER ERROR LOGICAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=  16; descr=  OBJECT  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=  16; descr=OBJECT in  is a Progress keyword
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=  24; descr=  bcust-b BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=  25; descr=  border-b BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/idiskeyword.p; line=  25; descr=border-b in  is a Progress keyword
+rule=nameconv; source=prolint/regrtest/ifindentextra.i; line=   8; descr= VARIABLE i INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/ifparens.p; line=   2; descr= VARIABLE a INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/ifparens.p; line=   3; descr= VARIABLE b INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/matches.p; line=  14; descr= VARIABLE somechar CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/matches.p; line=  15; descr= VARIABLE somebool LOGICAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/message.i; line=  18; descr=  MESSAGEFRAME  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/nestedfunc.p; line=   4; descr=INPUT PARAMETER someparameter  scope LOCAL nestedfunc should start with "l"
+rule=nameconv; source=prolint/regrtest/nestedfunc.p; line=   9; descr=INPUT PARAMETER someparam CHARACTER scope LOCAL nestedproc should start with "l"
+rule=nameconv; source=prolint/regrtest/nestedfunc.p; line=  10; descr=INPUT PARAMETER notused INTEGER scope LOCAL nestedproc should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  54; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_1 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  54; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_1 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  58; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  58; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  62; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_3 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  62; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_3 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  67; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_4 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  67; descr=INPUT PARAMETER test1  scope LOCAL udf_nocomment_4 should start with "l"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  74; descr= VARIABLE nocomment_var1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  74; descr= VARIABLE nocomment_var1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  76; descr= VARIABLE nocomment_var2 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/nocomment.i; line=  76; descr= VARIABLE nocomment_var2 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noeffect.i; line=   5; descr= VARIABLE i_noeffect INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noeffect.i; line=   6; descr= VARIABLE c_noeffect CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noeffect.i; line=   7; descr= VARIABLE h_noeffect HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=   5; descr= VARIABLE noundo_1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=   6; descr= VARIABLE noundo_2 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=   8; descr=  tt_noundo  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  16; descr=INPUT PARAMETER ip_noundo_1 CHARACTER scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  18; descr=OUTPUT PARAMETER ip_noundo_2 CHARACTER scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  19; descr=INPUTOUTPUT PARAMETER ip_noundo_3 LOGICAL scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  20; descr=INPUTOUTPUT PARAMETER  TABLE scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  22; descr= VARIABLE noundo_1 CHARACTER scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  23; descr= VARIABLE noundo_2 CHARACTER scope LOCAL ip_noundo should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  33; descr=  tt_noundo2  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  40; descr=  tt_noundo3  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  43; descr=  tt_noundo4  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  44; descr=  tt_noundo5  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  50; descr=INPUT PARAMETER ip_noundo_1 CHARACTER scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  52; descr=INPUT PARAMETER ip_noundo_2 HANDLE scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  54; descr=OUTPUT PARAMETER ip_noundo_3 INTEGER scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  56; descr=INPUTOUTPUT PARAMETER ip_noundo_4 LOGICAL scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  57; descr=OUTPUT PARAMETER ip_noundo_5 HANDLE scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/noundo.i; line=  59; descr=INPUT PARAMETER iph_noundo  scope LOCAL ip_noundo3 should start with "l"
+rule=nameconv; source=prolint/regrtest/nowhere.i; line=   4; descr=  tt_nowhere  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/nowhere.i; line=  22; descr=  buf-cust BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/oflink.i; line=  15; descr=  qoflink  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/recid.i; line=   3; descr= VARIABLE xyz RECID scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/release.p; line=   7; descr= VARIABLE hh COMHANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runargs.i; line=   4; descr= VARIABLE runargs_1 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runargs.i; line=   6; descr= VARIABLE runargs_2 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runargs.i; line=   8; descr= VARIABLE runargs_3 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runname.i; line=   5; descr= VARIABLE hRunname HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runname.i; line=   6; descr= VARIABLE vRunname CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runname.i; line=   7; descr= VARIABLE hRunnameServer HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/runname.i; line=  70; descr=INPUT PARAMETER cNothing CHARACTER scope LOCAL CtrlFrame.TreeView.NodeClicked should start with "l"
+rule=nameconv; source=prolint/regrtest/sepdbui.i; line=   5; descr=  tt_sepdbui  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  12; descr= VARIABLE shared_a HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  13; descr= VARIABLE shared_c HANDLE scope SHARED  should start with "l"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  14; descr= VARIABLE shared_d HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  16; descr= VARIABLE shared_e INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  17; descr= VARIABLE shared_f INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  20; descr=  tt_shared  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  23; descr=  tt_shared_b  scope SHARED  should start with "l"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  27; descr=  shared_g  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  28; descr=  shared_h  scope SHARED  should start with "l"
+rule=nameconv; source=prolint/regrtest/shared.i; line=  31; descr=  shared_cust BUFFER scope SHARED  should start with "l"
+rule=nameconv; source=prolint/regrtest/sharelock.i; line=   4; descr=  tt_sharelock  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/sharelock.i; line=   7; descr= VARIABLE vSharelock CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/sharelock.i; line=   8; descr=  qcust  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/sharelock.i; line=   9; descr=  buf_cust BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/sharelock.i; line=  10; descr=  buftt BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/sharelock.p; line=   8; descr= VARIABLE mBinaryFile MEMPTR scope LOCAL GetBinaryFileFromResponse should start with "l"
+rule=nameconv; source=prolint/regrtest/sharelock.p; line=   9; descr= VARIABLE iStartByte INTEGER scope LOCAL GetBinaryFileFromResponse should start with "l"
+rule=nameconv; source=prolint/regrtest/sharelock.p; line=  10; descr= VARIABLE iEndByte INTEGER scope LOCAL GetBinaryFileFromResponse should start with "l"
+rule=nameconv; source=prolint/regrtest/sharelock.p; line=  11; descr= VARIABLE gmResponse MEMPTR scope LOCAL GetBinaryFileFromResponse should start with "l"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=   2; descr=INPUT PARAMETER pc1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=   3; descr=OUTPUT PARAMETER opc1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=   4; descr=INPUTOUTPUT PARAMETER iopc1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=   6; descr= VARIABLE value1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=   7; descr= VARIABLE value2 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=  11; descr=  s1  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=  12; descr=  s2  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/streamclose.p; line=  13; descr=  sUnused  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/substitute.i; line=   2; descr= VARIABLE substitute_1 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/substitute.i; line=   3; descr= VARIABLE substitute_2 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/substitute.i; line=   4; descr= VARIABLE substitute_3 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/substitute.i; line=   6; descr= VARIABLE substitute_4 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/tablename.p; line=   7; descr= VARIABLE xyz INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/tablename.p; line=  10; descr= VARIABLE xyz INTEGER scope LOCAL CLOSE should start with "l"
+rule=nameconv; source=prolint/regrtest/tablename.p; line=  18; descr= VARIABLE hWidget HANDLE scope LOCAL intprocA should start with "l"
+rule=nameconv; source=prolint/regrtest/tablename.p; line=  25; descr= VARIABLE hWidget HANDLE scope LOCAL intprocB should start with "l"
+rule=nameconv; source=prolint/regrtest/test3.p; line=   4; descr= VARIABLE RADIO-SET-2 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/test3.p; line=   9; descr= VARIABLE myfile CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/test4.p; line=   3; descr= VARIABLE longtext CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=   9; descr=BUFFER PARAMETER P_bCustomer  scope LOCAL FnReadCustomer should start with "l"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  10; descr= VARIABLE nCustomer INTEGER scope LOCAL FnReadCustomer should start with "l"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  17; descr=INPUT PARAMETER hh  scope LOCAL FnTestHandle should start with "l"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  21; descr=  bCustomer BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  25; descr=  bufOrder BUFFER scope LOCAL SomeLocalBlock should start with "l"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  29; descr= VARIABLE qh HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  31; descr=  buf-dossier-path BUFFER scope LOCAL GO should start with "l"
+rule=nameconv; source=prolint/regrtest/testbuffers.p; line=  32; descr=  buf-combinations BUFFER scope LOCAL GO should start with "l"
+rule=nameconv; source=prolint/regrtest/undoretry.p; line=  36; descr=  ttblaat  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/undoretry.p; line=  39; descr=  ttblaatundo  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/use-index.i; line=   4; descr=  tt_customer  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=   5; descr=INPUT PARAMETER InputHandle HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=   6; descr= PARAMETER bCustomer BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=   8; descr= VARIABLE Name  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=   8; descr=Name in  is a Progress keyword
+rule=nameconv; source=prolint/regrtest/vardef.p; line=  17; descr=INPUT PARAMETER MyChar CHARACTER scope LOCAL proc1 should start with "l"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=  18; descr= VARIABLE currentFocus WIDGETHANDLE scope LOCAL proc1 should start with "l"
+rule=nameconv; source=prolint/regrtest/vardef.p; line=  23; descr=INPUT PARAMETER funcparchar  scope LOCAL func1 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=   9; descr= VARIABLE v_varusage_1 DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  10; descr= VARIABLE v_varusage_1b DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  11; descr= VARIABLE v_varusage_2 DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  12; descr= VARIABLE v_varusage_3 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  13; descr= VARIABLE v_varusage_4 CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  14; descr= VARIABLE v_varusage_5 LOGICAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  15; descr= VARIABLE v_varusage_8 HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  16; descr= VARIABLE v_varusage_9a INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  17; descr= VARIABLE v_varusage_9b INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  18; descr= VARIABLE v_varusage_10 INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  19; descr= VARIABLE v_varusage_11 HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  20; descr= VARIABLE v_varusage_12 HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  21; descr= VARIABLE v_varusage_14 DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  50; descr= VARIABLE v_varusage_12 INTEGER scope LOCAL CLOSE should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  51; descr= VARIABLE v_varusage_13 INTEGER scope LOCAL CLOSE should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  58; descr= VARIABLE v_varusage_newcity CHARACTER scope LOCAL WRITE should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  59; descr= VARIABLE v_varusage_oldcity CHARACTER scope LOCAL WRITE should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  61; descr= VARIABLE v_varusage_1 LOGICAL scope LOCAL WRITE should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  74; descr= VARIABLE v_varusage_ph1 HANDLE scope LOCAL ip_varusage_pp1 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  81; descr= VARIABLE v_varusage_ph2 HANDLE scope LOCAL ip_varusage_pp2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  89; descr= VARIABLE v_varusage_ph3 HANDLE scope LOCAL ip_varusage_pp3 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line=  90; descr= VARIABLE v_varusage_async HANDLE scope LOCAL ip_varusage_pp3 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 101; descr= VARIABLE v_varusage_ph4 HANDLE scope LOCAL ip_varusage_pp4 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 118; descr=INPUT PARAMETER v_varusage_1 INTEGER scope LOCAL ip_varusage_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 119; descr=INPUT PARAMETER p_varusage_b LOGICAL scope LOCAL ip_varusage_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 120; descr=OUTPUT PARAMETER p_varusage_c DECIMAL scope LOCAL ip_varusage_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 121; descr=INPUTOUTPUT PARAMETER p_varusage_d DECIMAL scope LOCAL ip_varusage_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 123; descr= VARIABLE v_varusage_ip INTEGER scope LOCAL ip_varusage_2 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 133; descr=INPUT PARAMETER whocares  scope LOCAL udf_varusage_1 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 135; descr= VARIABLE v_varusage_6 LOGICAL scope LOCAL udf_varusage_1 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 136; descr= VARIABLE v_varusage_ip INTEGER scope LOCAL udf_varusage_1 should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 146; descr= VARIABLE hColumn HANDLE scope LOCAL ip_varusage_browse should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 147; descr= VARIABLE hbCust HANDLE scope LOCAL ip_varusage_browse should start with "l"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 160; descr= VARIABLE hMenuItem HANDLE scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 170; descr= VARIABLE v_varusage2_1a DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 171; descr= VARIABLE v_varusage2_2a DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 172; descr= VARIABLE v_varusage2_3a DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 173; descr= VARIABLE v_varusage2_4a INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 174; descr= VARIABLE v_varusage2_5a CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 175; descr= VARIABLE v_varusage2_1b DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 176; descr= VARIABLE v_varusage2_2b DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 177; descr= VARIABLE v_varusage2_3b DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 178; descr= VARIABLE v_varusage2_4b INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 179; descr= VARIABLE v_varusage2_5b CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 180; descr= VARIABLE v_varusage2_1c DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 181; descr= VARIABLE v_varusage2_4c INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 182; descr= VARIABLE v_varusage2_5c CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 183; descr= VARIABLE v_varusage2_2d DECIMAL scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 184; descr= VARIABLE v_varusage2_4d INTEGER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 185; descr= VARIABLE v_varusage2_5d CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/varusage.i; line= 187; descr=  s_varusage2  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/weakchar.p; line=   3; descr= VARIABLE a CHARACTER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/where-udf.i; line=   3; descr=INPUT PARAMETER sometext  scope LOCAL wu-test1 should start with "l"
+rule=nameconv; source=prolint/regrtest/where-udf.i; line=   9; descr=INPUT PARAMETER sometext  scope LOCAL wu-test2 should start with "l"
+rule=nameconv; source=prolint/regrtest/wholeindex.i; line=   4; descr=  tt_wholeindex  scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/wholeindex.i; line=   9; descr=  buf_wholeindex BUFFER scope MAIN  should start with "g"
+rule=nameconv; source=prolint/regrtest/wholeindex.i; line=  10; descr=  buf_customer BUFFER scope MAIN  should start with "g"
+rule=nestedfunc; source=prolint/regrtest/nestedfunc.p; line=   4; descr=FUNCTION nestedfunc is defined inside a code block
+rule=nestedfunc; source=prolint/regrtest/nestedfunc.p; line=   8; descr=PROCEDURE nestedproc is defined inside a code block
+rule=nobrackets; source=prolint/regrtest/noeffect.i; line=  36; descr=handle:query-open should have brackets
+rule=nobrackets; source=prolint/regrtest/noeffect.i; line=  37; descr=handle:get-first should have brackets
+rule=nobrackets; source=prolint/regrtest/noeffect.i; line=  38; descr=handle:get-next should have brackets
+rule=nobreakby; source=prolint/regrtest/sharelock.i; line=  51; descr=DO PRESELECT EACH custom... statement should use "BY" option instead of "BREAK BY" option.
+rule=nocomment; source=prolint/regrtest/nestedfunc.p; line=   4; descr=FUNCTION nestedfunc is not commented
+rule=nocomment; source=prolint/regrtest/nestedfunc.p; line=   8; descr=PROCEDURE nestedproc is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  33; descr=PROCEDURE ip_nocomment_3 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  33; descr=PROCEDURE ip_nocomment_3 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  38; descr=PROCEDURE ip_nocomment_4 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  38; descr=PROCEDURE ip_nocomment_4 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  54; descr=FUNCTION udf_nocomment_1 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  54; descr=FUNCTION udf_nocomment_1 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  58; descr=FUNCTION udf_nocomment_2 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line=  58; descr=FUNCTION udf_nocomment_2 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line= 114; descr=PROCEDURE ip_nocomment_7 is not commented
+rule=nocomment; source=prolint/regrtest/nocomment.i; line= 114; descr=PROCEDURE ip_nocomment_7 is not commented
+rule=nocomment; source=prolint/regrtest/tablename.p; line=  17; descr=PROCEDURE intprocA is not commented
+rule=nocomment; source=prolint/regrtest/tablename.p; line=  24; descr=PROCEDURE intprocB is not commented
+rule=nocomment; source=prolint/regrtest/testbuffers.p; line=  17; descr=FUNCTION FnTestHandle is not commented
+rule=nocomment; source=prolint/regrtest/testbuffers.p; line=  24; descr=PROCEDURE SomeLocalBlock is not commented
+rule=nocomment; source=prolint/regrtest/vardef.p; line=  22; descr=FUNCTION func1 is not commented
+rule=noeffect; source=prolint/regrtest/ifindentextra.i; line=   6; descr=Statement has no effect
+rule=noeffect; source=prolint/regrtest/noeffect.i; line=  23; descr=Statement has no effect
+rule=noeffect; source=prolint/regrtest/noeffect.i; line=  24; descr=Statement has no effect
+rule=noeffect; source=prolint/regrtest/noeffect.i; line=  27; descr=Statement has no effect
+rule=noeffect; source=prolint/regrtest/noeffect.i; line=  47; descr=Statement has no effect
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  14; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  16; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  18; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  20; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  22; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  24; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  26; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  28; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  30; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  32; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/andorparens.p; line=  34; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/findstate.i; line=   3; descr=find FIRST order statement defined without no-error
+rule=noerror; source=prolint/regrtest/findstate.i; line=   4; descr=find customer customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/nowhere.i; line=   9; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/nowhere.i; line=  10; descr=find NEXT customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/nowhere.i; line=  12; descr=find tt_nowhere tt_nowhere statement defined without no-error
+rule=noerror; source=prolint/regrtest/nowhere.i; line=  13; descr=find NEXT tt_nowhere statement defined without no-error
+rule=noerror; source=prolint/regrtest/nowhere.i; line=  19; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/recid.i; line=   5; descr=find customer customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/release.p; line=   3; descr=find first customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/sharelock.i; line=  40; descr=find NEXT customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/sharelock.i; line=  44; descr=find NEXT customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/sharelock.i; line=  48; descr=find NEXT customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/tablename.p; line=  12; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/tablename.p; line=  19; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  12; descr=find FIRST customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  13; descr=find NEXT customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  15; descr=find buf_customer buf_customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  16; descr=find NEXT buf_customer statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  18; descr=find tt_wholeindex tt_wholeindex statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  19; descr=find NEXT tt_wholeindex statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  21; descr=find buf_wholeindex buf_wholeindex statement defined without no-error
+rule=noerror; source=prolint/regrtest/wholeindex.i; line=  22; descr=find NEXT buf_wholeindex statement defined without no-error
+rule=nolike; source=prolint/regrtest/vardef.p; line=   8; descr=Variables and Temp-Table fields should not be defined 'LIKE' a database field in statement  def var Name like Customer.Name no-undo .
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  16; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  18; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  20; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  22; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  24; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  26; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  28; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  30; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  32; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/andorparens.p; line=  34; descr=FIND FIRST customer WHER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line=  63; descr=&Scoped-define OPEN-QUER... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line= 148; descr=WITH NO-ROW-MARKERS SEPA... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line= 242; descr="Customer.Name" ? ? "cha... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line= 266; descr=/* CtrlFrame OCXINFO:CRE... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line= 354; descr=R-INDEX(THIS-PROCEDURE:F... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/defaultname.w; line= 365; descr="The binary control file... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/sharelock.p; line=  13; descr=COPY-LOB FROM gmResponse... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=   2; descr=define input parameter p... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=   3; descr=define output parameter ... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=   4; descr=define input-output para... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=   9; descr=run test (input value1, ... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=  13; descr=define stream sUnused.  ... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=  17; descr=output stream s1 to valu... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=  21; descr=input through ls.       ... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/streamclose.p; line=  24; descr=input stream s2 from "c:... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test.p; line=   1; descr=/* ---------------------... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test.p; line=   5; descr=------------------------... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test.p; line=  15; descr=3. include syntax that c... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test.p; line=  16; descr=4. be careful not to def... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test2.p; line=   1; descr=/* ---------------------... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test2.p; line=   6; descr=------------------------... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test2.p; line=  15; descr=3. include syntax that c... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test2.p; line=  16; descr=4. be careful not to def... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test3.p; line=  17; descr=/* run statements use un... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test4.p; line=   6; descr=longtext = "this is a te... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/test4.p; line=   7; descr=longtext = "this is a te... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/testbuffers.p; line=   9; descr=FUNCTION FnReadCustomer ... line has more than 80 characters.
+rule=nolonglines; source=prolint/regrtest/testbuffers.p; line=  36; descr=qh:SET-BUFFERS(BUFFER bu... line has more than 80 characters.
+rule=nonestinc; source=prolint/regrtest/ifindentextra.i; line=  23; descr=Nested Include Found: {prolint/regrtest/nocomment.i}      {prolint/regrtest/nocomment.i}
+rule=nonestinc; source=prolint/regrtest/message.i; line=  25; descr=Nested Include Found: {src/adm/template/dialogmn.i}{src/adm/template/dialogmn.i}
+rule=noundo; source=prolint/regrtest/ifindentextra.i; line=   8; descr=variable 'i' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=   5; descr=variable 'noundo_1' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=   8; descr=temp-table 'tt_noundo' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=  16; descr=parameter 'ip_noundo_1' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=  18; descr=parameter 'ip_noundo_2' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=  19; descr=parameter 'ip_noundo_3' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=  22; descr=variable 'noundo_1' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/noundo.i; line=  40; descr=temp-table 'tt_noundo3' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/use-index.i; line=   4; descr=temp-table 'tt_customer' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/varusage.i; line= 135; descr=variable 'v_varusage_6' defined without NO-UNDO
+rule=noundo; source=prolint/regrtest/wholeindex.i; line=   4; descr=temp-table 'tt_wholeindex' defined without NO-UNDO
+rule=nowait; source=prolint/regrtest/nowhere.i; line=  20; descr=FIND CURRENT customer exclusive statement defined without no-wait
+rule=nowhere; source=prolint/regrtest/defaultname.w; line= 411; descr=no WHERE-clause on table Customer
+rule=nowhere; source=prolint/regrtest/findstate.i; line=   3; descr=no WHERE-clause on table order
+rule=nowhere; source=prolint/regrtest/nowhere.i; line=  10; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/oflink.i; line=   3; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/oflink.i; line=  17; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/release.p; line=   3; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/sharelock.i; line=  25; descr=no WHERE-clause on table order
+rule=nowhere; source=prolint/regrtest/sharelock.i; line=  40; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/sharelock.i; line=  44; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/sharelock.i; line=  48; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/sharelock.i; line=  53; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/tablename.p; line=   2; descr=no WHERE-clause on table Customer
+rule=nowhere; source=prolint/regrtest/tablename.p; line=  12; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/tablename.p; line=  19; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/testbuffers.p; line=  11; descr=no WHERE-clause on table P_bCustomer
+rule=nowhere; source=prolint/regrtest/use-index.i; line=   8; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/where-udf.i; line=   5; descr=no WHERE-clause on table salesrep
+rule=nowhere; source=prolint/regrtest/wholeindex.i; line=  13; descr=no WHERE-clause on table customer
+rule=nowhere; source=prolint/regrtest/wholeindex.i; line=  16; descr=no WHERE-clause on table buf_customer
+rule=nowhere; source=prolint/regrtest/wholeindex.i; line=  24; descr=no WHERE-clause on table customer
+rule=obsoletenodes; source=prolint/regrtest/recid.i; line=   3; descr=RECID used, rewrite to ROWID
+rule=obsoletenodes; source=prolint/regrtest/recid.i; line=   4; descr=RECID used, rewrite to ROWID
+rule=obsoletenodes; source=prolint/regrtest/recid.i; line=   5; descr=RECID used, rewrite to ROWID
+rule=obsoletenodes; source=prolint/regrtest/recid.i; line=   6; descr=RECID used, rewrite to ROWID
+rule=obsoletenodes; source=prolint/regrtest/recid.i; line=   7; descr=RECID used, rewrite to ROWID
+rule=oflink; source=prolint/regrtest/findstate.i; line=   4; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/nowhere.i; line=  16; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/oflink.i; line=   5; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/oflink.i; line=   7; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/oflink.i; line=  11; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/oflink.i; line=  17; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/sharelock.i; line=  19; descr=OF used instead WHERE
+rule=oflink; source=prolint/regrtest/sharelock.i; line=  34; descr=OF used instead WHERE
+rule=release; source=prolint/regrtest/release.p; line=   4; descr=RELEASE customer customer statement found
+rule=runargs; source=prolint/regrtest/runargs.i; line=  11; descr=run-time arguments in RUN statement
+rule=runargs; source=prolint/regrtest/runargs.i; line=  12; descr=run-time arguments in RUN statement
+rule=runargs; source=prolint/regrtest/runargs.i; line=  15; descr=run-time arguments in RUN statement
+rule=runargs; source=prolint/regrtest/runargs.i; line=  18; descr=run-time arguments in RUN statement
+rule=runasnotfound; source=prolint/regrtest/runname.i; line=  51; descr=proc 'Ahjsgf.p' not found on hRunnameServer
+rule=runasnotfound; source=prolint/regrtest/varusage.i; line=  42; descr=proc 'myproc.p' not found on v_varusage_8
+rule=runname; source=prolint/regrtest/runname.i; line=  12; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  13; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  14; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  20; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  23; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  27; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  37; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  41; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  45; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  46; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  48; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  51; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  63; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  64; descr=progname in RUN-statement is not Unix-compatible
+rule=runname; source=prolint/regrtest/runname.i; line=  65; descr=progname in RUN-statement is not Unix-compatible
+rule=runnotfound; source=prolint/regrtest/runargs.i; line=  18; descr=proc 'jhsgfjhg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  10; descr=proc 'gjhgjhg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  11; descr=proc 'subdir/ghhtf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  12; descr=proc 'SubDir/Ghhtf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  13; descr=proc 'subdir\ghhtf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  14; descr=proc 'SubDir\Ghhtf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  20; descr=proc 'Without_dotp' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  21; descr=proc 'without_dotp' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  22; descr=proc 'jkhhgf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  23; descr=proc 'Jkhhgf.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  32; descr=proc 'kjckjshcr.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  36; descr=proc 'SubDir\Shgchcg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  37; descr=proc 'SubDir\Shgchcg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  45; descr=proc 'SubDir\Shgchcg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  46; descr=proc 'Another\Shgchcg.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  48; descr=proc 'Rjhsghj.p' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  58; descr=proc 'gsd\hwhdhe.w' not found
+rule=runnotfound; source=prolint/regrtest/runname.i; line=  59; descr=proc 'gsd\hwhdhe.r' not found
+rule=runnotfound; source=prolint/regrtest/test3.p; line=  18; descr=proc 'test2.p' not found
+rule=runnotfound; source=prolint/regrtest/varusage.i; line=  75; descr=proc 'myproc.p' not found
+rule=runnotfound; source=prolint/regrtest/varusage.i; line=  82; descr=proc 'myproc.p' not found
+rule=runnotfound; source=prolint/regrtest/varusage.i; line=  91; descr=proc 'myproc.p' not found
+rule=runnotfound; source=prolint/regrtest/varusage.i; line= 102; descr=proc 'myproc.p' not found
+rule=sepdbui; source=prolint/regrtest/defaultname.w; line= 137; descr=Separate UI from DB-access (UI in line 364 of prolint/regrtest/defaultname.w)
+rule=sepdbui; source=prolint/regrtest/vardef.p; line=   6; descr=Separate UI from DB-access (UI in line 10 of prolint/regrtest/vardef.p)
+rule=sepdbui; source=prolint/regrtest/varusage.i; line=  37; descr=Separate UI from DB-access (UI in line 6 of prolint/regrtest/message.i)
+rule=shared; source=prolint/regrtest/shared.i; line=  13; descr=avoid SHARED on variable 'shared_c'
+rule=shared; source=prolint/regrtest/shared.i; line=  14; descr=avoid SHARED on variable 'shared_d'
+rule=shared; source=prolint/regrtest/shared.i; line=  17; descr=avoid SHARED on variable 'shared_f'
+rule=shared; source=prolint/regrtest/shared.i; line=  20; descr=avoid SHARED on temptable 'tt_shared'
+rule=shared; source=prolint/regrtest/shared.i; line=  23; descr=avoid SHARED on temptable 'tt_shared_b'
+rule=shared; source=prolint/regrtest/shared.i; line=  31; descr=avoid SHARED on buffer 'shared_cust'
+rule=sharelock; source=prolint/regrtest/abbrevkwd.i; line=  16; descr=OPEN QUERY custome has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  14; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  16; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  18; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  20; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  22; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  24; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  26; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  28; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  30; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  32; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/andorparens.p; line=  34; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/release.p; line=   3; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  13; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  14; descr=FIND buf_cust has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  19; descr=OPEN QUERY order has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  25; descr=FOR order has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  34; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  37; descr=FIND buf_cust has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  43; descr=PRESELECT customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/sharelock.i; line=  48; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/wholeindex.i; line=  12; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/wholeindex.i; line=  13; descr=FIND customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/wholeindex.i; line=  15; descr=FIND buf_customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sharelock; source=prolint/regrtest/wholeindex.i; line=  16; descr=FIND buf_customer has no NO-LOCK / EXCLUSIVE-LOCK
+rule=sortaccess; source=prolint/regrtest/sharelock.i; line=  51; descr=SORT-ACCESS found in xref on table Customer
+rule=sortaccess; source=prolint/regrtest/sortaccess.i; line=   5; descr=SORT-ACCESS found in xref on table Customer
+rule=sortaccess; source=prolint/regrtest/wholeindex.i; line=  24; descr=SORT-ACCESS found in xref on table Customer
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  14; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  16; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  18; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  18; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  20; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  20; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  22; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  22; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  24; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  24; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  26; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  26; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  28; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  28; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  30; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  30; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  32; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  32; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  34; descr=no string attributes on "boston"
+rule=strattrib; source=prolint/regrtest/andorparens.p; line=  34; descr=no string attributes on "john"
+rule=strattrib; source=prolint/regrtest/defaultname.w; line= 103; descr=no string attributes on "Item 1"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=   1; descr=no string attributes on "firstline"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=  13; descr=no string attributes on "hi"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=  16; descr=no string attributes on "yo"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=  19; descr=no string attributes on "thats right"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=  20; descr=no string attributes on "duh"
+rule=strattrib; source=prolint/regrtest/ifindentextra.i; line=  24; descr=no string attributes on "gotcha!"
+rule=strattrib; source=prolint/regrtest/runname.i; line=  32; descr=no string attributes on 'parameter1'
+rule=strattrib; source=prolint/regrtest/runname.i; line=  32; descr=no string attributes on 'parameter2'
+rule=strattrib; source=prolint/regrtest/runname.i; line=  41; descr=no string attributes on "Part1"
+rule=strattrib; source=prolint/regrtest/runname.i; line=  51; descr=no string attributes on "event_ip"
+rule=strattrib; source=prolint/regrtest/runname.i; line=  63; descr=no string attributes on "test\jhdgjah.p"
+rule=strattrib; source=prolint/regrtest/runname.i; line=  64; descr=no string attributes on "test~\jhdgjah.p"
+rule=strattrib; source=prolint/regrtest/runname.i; line=  65; descr=no string attributes on "test\\jhdgjah.p"
+rule=strattrib; source=prolint/regrtest/sharelock.i; line=  16; descr=no string attributes on "x"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=   5; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  10; descr=no string attributes on 'Hello prolint user'
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  14; descr=no string attributes on "&1 &2 &3"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  14; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  14; descr=no string attributes on "prolint"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  14; descr=no string attributes on "user"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  26; descr=no string attributes on 'prolint'
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  26; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  26; descr=no string attributes on "user"
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  47; descr=no string attributes on 'prolint'
+rule=strattrib; source=prolint/regrtest/strattrib.i; line=  57; descr=no string attributes on "title"
+rule=strattrib; source=prolint/regrtest/test3.p; line=   6; descr=no string attributes on "w3"
+rule=strattrib; source=prolint/regrtest/test4.p; line=   6; descr=no string attributes on "this is a test for rule m..."
+rule=strattrib; source=prolint/regrtest/vardef.p; line=  10; descr=no string attributes on "Question"
+rule=strattrib; source=prolint/regrtest/where-udf.i; line=  19; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest/where-udf.i; line=  27; descr=no string attributes on "hello"
+rule=strattrib; source=prolint/regrtest/wholeindex.i; line=  18; descr=no string attributes on "test"
+rule=strattrib; source=prolint/regrtest/wholeindex.i; line=  21; descr=no string attributes on "test"
+rule=streamclose; source=prolint/regrtest/streamclose.p; line=  13; descr=stream sUnused is defined but never used
+rule=streamclose; source=prolint/regrtest/streamclose.p; line=  17; descr=stream s1 is opened for OUTPUT but not correctly closed
+rule=streamclose; source=prolint/regrtest/streamclose.p; line=  21; descr=stream UNNAMED-INPUT is opened for INPUT but not correctly closed
+rule=streamclose; source=prolint/regrtest/streamclose.p; line=  23; descr=stream s2 is opened for OUTPUT but not correctly closed, before used differently on line 24
+rule=streamclose; source=prolint/regrtest/streamclose.p; line=  24; descr=stream s2 is opened for INPUT but not correctly closed
+rule=streamclose; source=prolint/regrtest/varusage.i; line= 187; descr=stream s_varusage2 is defined but never used
+rule=substitute; source=prolint/regrtest/runname.i; line=  26; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/runname.i; line=  27; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/runname.i; line=  40; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/runname.i; line=  41; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  21; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  24; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  26; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  37; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  42; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  46; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/strattrib.i; line=  47; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/substitute.i; line=  15; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/substitute.i; line=  33; descr=replace string concatenation by SUBSTITUTE
+rule=substitute; source=prolint/regrtest/substitute.i; line=  36; descr=replace string concatenation by SUBSTITUTE
+rule=tablename; source=prolint/regrtest/tablename.p; line=   5; descr=field NAME must be qualified with tablename
+rule=tablename; source=prolint/regrtest/tablename.p; line=   5; descr=field NAME must be qualified with tablename
+rule=tablename; source=prolint/regrtest/tablename.p; line=  13; descr=field custnum must be qualified with tablename
+rule=tablename; source=prolint/regrtest/tablename.p; line=  21; descr=field custnum must be qualified with tablename
+rule=tableusage; source=prolint/regrtest/abbrevkwd.i; line=  41; descr=Global TEMPTABLE ttabbrev is not used
+rule=tableusage; source=prolint/regrtest/idiskeyword.p; line=  16; descr=Global TEMPTABLE OBJECT is not used
+rule=tableusage; source=prolint/regrtest/idiskeyword.p; line=  24; descr=Global BUFFER bcust-b is not used
+rule=tableusage; source=prolint/regrtest/idiskeyword.p; line=  25; descr=Global BUFFER border-b is not used
+rule=tableusage; source=prolint/regrtest/noundo.i; line=  40; descr=Global TEMPTABLE tt_noundo3 is not used
+rule=tableusage; source=prolint/regrtest/noundo.i; line=  43; descr=Global TEMPTABLE tt_noundo4 is not used
+rule=tableusage; source=prolint/regrtest/noundo.i; line=  44; descr=Global TEMPTABLE tt_noundo5 is not used
+rule=tableusage; source=prolint/regrtest/sepdbui.i; line=   5; descr=Global TEMPTABLE tt_sepdbui is not used
+rule=tableusage; source=prolint/regrtest/shared.i; line=  20; descr=Global NEW SHARED TEMPTABLE tt_shared is not used
+rule=tableusage; source=prolint/regrtest/shared.i; line=  23; descr=Global SHARED TEMPTABLE tt_shared_b is not used
+rule=tableusage; source=prolint/regrtest/shared.i; line=  31; descr=Global SHARED BUFFER shared_cust is not used
+rule=tableusage; source=prolint/regrtest/undoretry.p; line=  39; descr=Global TEMPTABLE ttblaatundo is not used
+rule=tableusage; source=prolint/regrtest/use-index.i; line=   4; descr=Global TEMPTABLE tt_customer is not used
+rule=ttnoindex; source=prolint/regrtest/noundo.i; line=  40; descr=TempTable tt_noundo3 defined like tt_noundo2 has no index defined.
+rule=ttnoindex; source=prolint/regrtest/noundo.i; line=  43; descr=TempTable tt_noundo4 defined like tt_noundo has no index defined.
+rule=ttnoindex; source=prolint/regrtest/noundo.i; line=  44; descr=TempTable tt_noundo5 defined like tt_noundo2 has no index defined.
+rule=ttnoindex; source=prolint/regrtest/sepdbui.i; line=   5; descr=TempTable tt_sepdbui defined like customer has no index defined.
+rule=ttnoindex; source=prolint/regrtest/undoretry.p; line=  39; descr=TempTable ttblaatundo defined like ttblaat has no index defined.
+rule=undoretry; source=prolint/regrtest/undoretry.p; line=   5; descr="UNDO" defaults to "UNDO, RETRY"
+rule=undoretry; source=prolint/regrtest/undoretry.p; line=   7; descr="UNDO" defaults to "UNDO, RETRY"
+rule=undoretry; source=prolint/regrtest/undoretry.p; line=  24; descr="UNDO" defaults to "UNDO, RETRY"
+rule=uninproc; source=prolint/regrtest/idiskeyword.p; line=  10; descr=Internal Procedure nothing is not used.
+rule=uninproc; source=prolint/regrtest/nestedfunc.p; line=   8; descr=Internal Procedure nestedproc is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  14; descr=Internal Procedure ip_nocomment_1 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  14; descr=Internal Procedure ip_nocomment_1 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  21; descr=Internal Procedure ip_nocomment_2 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  21; descr=Internal Procedure ip_nocomment_2 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  27; descr=Internal Procedure ip_nocomment_2b is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  27; descr=Internal Procedure ip_nocomment_2b may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  33; descr=Internal Procedure ip_nocomment_3 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  33; descr=Internal Procedure ip_nocomment_3 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  38; descr=Internal Procedure ip_nocomment_4 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  38; descr=Internal Procedure ip_nocomment_4 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  42; descr=Internal Procedure ip_nocomment_5 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  42; descr=Internal Procedure ip_nocomment_5 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  48; descr=Internal Procedure ip_nocomment_6 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  48; descr=Internal Procedure ip_nocomment_6 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  79; descr=Internal Procedure ReadCfgEditor is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line=  79; descr=Internal Procedure ReadCfgEditor may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 102; descr=Internal Procedure AbGeneratedProcedure is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 102; descr=Internal Procedure AbGeneratedProcedure may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 114; descr=Internal Procedure ip_nocomment_7 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 114; descr=Internal Procedure ip_nocomment_7 may not be used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 121; descr=Internal Procedure ip_nocomment_8 is not used.
+rule=uninproc; source=prolint/regrtest/nocomment.i; line= 121; descr=Internal Procedure ip_nocomment_8 may not be used.
+rule=uninproc; source=prolint/regrtest/noundo.i; line=  14; descr=Internal Procedure ip_noundo may not be used.
+rule=uninproc; source=prolint/regrtest/noundo.i; line=  28; descr=Internal Procedure apifunction may not be used.
+rule=uninproc; source=prolint/regrtest/noundo.i; line=  47; descr=Internal Procedure ip_noundo3 may not be used.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  26; descr=UNKNOWN Procedure executed at line 26.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  27; descr=UNKNOWN Procedure executed at line 27.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  40; descr=UNKNOWN Procedure executed at line 40.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  41; descr=UNKNOWN Procedure executed at line 41.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  54; descr=Internal Procedure RTB_xref_generator may not be used.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  63; descr=UNKNOWN Procedure executed at line 63.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  64; descr=UNKNOWN Procedure executed at line 64.
+rule=uninproc; source=prolint/regrtest/runname.i; line=  65; descr=UNKNOWN Procedure executed at line 65.
+rule=uninproc; source=prolint/regrtest/tablename.p; line=  17; descr=Internal Procedure intprocA is not used.
+rule=uninproc; source=prolint/regrtest/tablename.p; line=  24; descr=Internal Procedure intprocB is not used.
+rule=uninproc; source=prolint/regrtest/testbuffers.p; line=  24; descr=Internal Procedure SomeLocalBlock is not used.
+rule=uninproc; source=prolint/regrtest/vardef.p; line=  13; descr=Internal Procedure proc1 is not used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line=  72; descr=Internal Procedure ip_varusage_pp1 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line=  79; descr=Internal Procedure ip_varusage_pp2 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line=  87; descr=Internal Procedure ip_varusage_pp3 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line=  99; descr=Internal Procedure ip_varusage_pp4 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line= 107; descr=Internal Procedure ip_varusage_1 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line= 116; descr=Internal Procedure ip_varusage_2 may not be used.
+rule=uninproc; source=prolint/regrtest/varusage.i; line= 142; descr=Internal Procedure ip_varusage_browse may not be used.
+rule=unquoted; source=prolint/regrtest/streamclose.p; line=  15; descr=unquoted string: c:\temp\test1.txt
+rule=unquoted; source=prolint/regrtest/streamclose.p; line=  21; descr=unquoted string: ls
+rule=unquoted; source=prolint/regrtest/test3.p; line=   6; descr=unquoted string: w1
+rule=unquoted; source=prolint/regrtest/test3.p; line=   6; descr=unquoted string: w2
+rule=unquoted; source=prolint/regrtest/test3.p; line=  10; descr=unquoted string: myfile
+rule=use-index; source=prolint/regrtest/use-index.i; line=   9; descr=avoid using USE-INDEX
+rule=varusage; source=prolint/regrtest/abbrevkwd.i; line=   5; descr=variable abbrev2 is assigned but never accessed
+rule=varusage; source=prolint/regrtest/abbrevkwd.i; line=   9; descr=variable abbrev4 is never used
+rule=varusage; source=prolint/regrtest/abbrevkwd.i; line=  46; descr=variable abbrev5 is never used
+rule=varusage; source=prolint/regrtest/defaultname.w; line= 348; descr=variable UIB_S is assigned but never accessed
+rule=varusage; source=prolint/regrtest/dotcomment.i; line=   4; descr=variable dotcomment is never used
+rule=varusage; source=prolint/regrtest/i18nlength.i; line=   6; descr=variable i18nlength_2 is assigned but never accessed
+rule=varusage; source=prolint/regrtest/matches.p; line=  15; descr=variable somebool is assigned but never accessed
+rule=varusage; source=prolint/regrtest/nestedfunc.p; line=   9; descr=parameter someparam is assigned but never accessed
+rule=varusage; source=prolint/regrtest/nestedfunc.p; line=  10; descr=parameter notused is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  54; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  54; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  58; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  58; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  62; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  62; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  67; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/nocomment.i; line=  67; descr=parameter test1 is never used
+rule=varusage; source=prolint/regrtest/noundo.i; line=   5; descr=variable noundo_1 is never used
+rule=varusage; source=prolint/regrtest/noundo.i; line=   6; descr=variable noundo_2 is never used
+rule=varusage; source=prolint/regrtest/noundo.i; line=  16; descr=parameter ip_noundo_1 is never used
+rule=varusage; source=prolint/regrtest/noundo.i; line=  22; descr=variable noundo_1 in PROCEDURE ip_noundo hides object in program scope
+rule=varusage; source=prolint/regrtest/noundo.i; line=  22; descr=variable noundo_1 is never used
+rule=varusage; source=prolint/regrtest/noundo.i; line=  23; descr=variable noundo_2 in PROCEDURE ip_noundo hides object in program scope
+rule=varusage; source=prolint/regrtest/noundo.i; line=  23; descr=variable noundo_2 is never used
+rule=varusage; source=prolint/regrtest/shared.i; line=  13; descr=variable shared_c is never used
+rule=varusage; source=prolint/regrtest/streamclose.p; line=   2; descr=parameter pc1 is never used
+rule=varusage; source=prolint/regrtest/tablename.p; line=   7; descr=variable xyz is never used
+rule=varusage; source=prolint/regrtest/tablename.p; line=  10; descr=variable xyz in ON CLOSE hides object in program scope
+rule=varusage; source=prolint/regrtest/test3.p; line=   4; descr=variable RADIO-SET-2 is never used
+rule=varusage; source=prolint/regrtest/test4.p; line=   3; descr=variable longtext is assigned but never accessed
+rule=varusage; source=prolint/regrtest/testbuffers.p; line=   9; descr=parameter xyz is never used
+rule=varusage; source=prolint/regrtest/testbuffers.p; line=  17; descr=parameter hh is never used
+rule=varusage; source=prolint/regrtest/vardef.p; line=   5; descr=parameter InputHandle is never used
+rule=varusage; source=prolint/regrtest/vardef.p; line=   8; descr=variable Name is never used
+rule=varusage; source=prolint/regrtest/vardef.p; line=  17; descr=parameter MyChar is never used
+rule=varusage; source=prolint/regrtest/vardef.p; line=  18; descr=variable currentFocus is never used
+rule=varusage; source=prolint/regrtest/vardef.p; line=  23; descr=parameter funcparchar is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line=   9; descr=variable v_varusage_1 is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line=  20; descr=variable v_varusage_12 is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line=  50; descr=variable v_varusage_12 in ON CLOSE hides object in program scope
+rule=varusage; source=prolint/regrtest/varusage.i; line=  51; descr=variable v_varusage_13 is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line=  59; descr=variable v_varusage_oldcity is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line=  61; descr=variable v_varusage_1 in ON WRITE hides object in program scope
+rule=varusage; source=prolint/regrtest/varusage.i; line=  74; descr=variable v_varusage_ph1 is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line=  90; descr=variable v_varusage_async is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 118; descr=parameter v_varusage_1 in PROCEDURE ip_varusage_2 hides object in program scope
+rule=varusage; source=prolint/regrtest/varusage.i; line= 119; descr=parameter p_varusage_b is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line= 123; descr=variable v_varusage_ip is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line= 133; descr=parameter nobody is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line= 133; descr=parameter whocares is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line= 136; descr=variable v_varusage_ip is never used
+rule=varusage; source=prolint/regrtest/varusage.i; line= 170; descr=variable v_varusage2_1a is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 171; descr=variable v_varusage2_2a is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 172; descr=variable v_varusage2_3a is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 173; descr=variable v_varusage2_4a is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 174; descr=variable v_varusage2_5a is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 175; descr=variable v_varusage2_1b is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 176; descr=variable v_varusage2_2b is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 177; descr=variable v_varusage2_3b is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 178; descr=variable v_varusage2_4b is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 179; descr=variable v_varusage2_5b is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 180; descr=variable v_varusage2_1c is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 181; descr=variable v_varusage2_4c is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 182; descr=variable v_varusage2_5c is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 183; descr=variable v_varusage2_2d is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 184; descr=variable v_varusage2_4d is assigned but never accessed
+rule=varusage; source=prolint/regrtest/varusage.i; line= 185; descr=variable v_varusage2_5d is assigned but never accessed
+rule=varusage; source=prolint/regrtest/where-udf.i; line=   3; descr=parameter sometext is never used
+rule=varusage; source=prolint/regrtest/where-udf.i; line=   9; descr=parameter sometext is never used
+rule=weakchar; source=prolint/regrtest/weakchar.p; line=   5; descr=weak character test for a
+rule=weakchar; source=prolint/regrtest/weakchar.p; line=   7; descr=weak character test for a
+rule=where-udf; source=prolint/regrtest/where-udf.i; line=  15; descr=User Defined Function used in WHERE clause
+rule=where-udf; source=prolint/regrtest/where-udf.i; line=  19; descr=User Defined Function used in WHERE clause
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  14; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  16; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  18; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  20; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  22; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  24; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  30; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/andorparens.p; line=  32; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/blocklabel.i; line=   4; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/blocklabel.i; line=  10; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/blocklabel.i; line=  16; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/blocklabel.i; line=  22; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/blocklabel.i; line=  28; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/defaultname.w; line= 411; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/findstate.i; line=   3; descr=WHOLE-INDEX found in xref on table Order
+rule=wholeindex; source=prolint/regrtest/matches.p; line=  18; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/nowhere.i; line=  10; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/oflink.i; line=   3; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/oflink.i; line=  17; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/release.p; line=   3; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  25; descr=WHOLE-INDEX found in xref on table Order
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  39; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  43; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  47; descr=WHOLE-INDEX found in xref on table Order
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  48; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/sharelock.i; line=  51; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/tablename.p; line=   2; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/tablename.p; line=  12; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/tablename.p; line=  19; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/testbuffers.p; line=  11; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/use-index.i; line=   8; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/varusage.i; line=  37; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/varusage.i; line= 149; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/where-udf.i; line=   5; descr=WHOLE-INDEX found in xref on table Salesrep
+rule=wholeindex; source=prolint/regrtest/where-udf.i; line=  15; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/where-udf.i; line=  19; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/where-udf.i; line=  23; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/where-udf.i; line=  27; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/wholeindex.i; line=  13; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/wholeindex.i; line=  16; descr=WHOLE-INDEX found in xref on table Customer
+rule=wholeindex; source=prolint/regrtest/wholeindex.i; line=  24; descr=WHOLE-INDEX found in xref on table Customer

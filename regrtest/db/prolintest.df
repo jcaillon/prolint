@@ -1,0 +1,520 @@
+UPDATE DATABASE "?"
+
+ADD TABLE "Customer"
+  DESCRIPTION "The customer table contains customer  information including  balance and address."
+  DUMP-NAME "customer"
+
+ADD FIELD "CustNum" OF "Customer" AS integer 
+  FORMAT ">>>>9"
+  INITIAL "0"
+  LABEL "Cust Num"
+  SQL-WIDTH 4
+  VALEXP "custnum > 0"
+  VALMSG "Customer number must be greater than zero"
+  HELP "Please enter a customer number."
+  ORDER 10
+
+ADD FIELD "Name" OF "Customer" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Name"
+  SQL-WIDTH 60
+  HELP "Please enter a name."
+  ORDER 30
+
+ADD FIELD "Address" OF "Customer" AS character 
+  FORMAT "x(35)"
+  INITIAL ""
+  LABEL "Address"
+  SQL-WIDTH 70
+  HELP "Please enter an address."
+  ORDER 40
+
+ADD FIELD "Address2" OF "Customer" AS character 
+  FORMAT "x(35)"
+  INITIAL ""
+  LABEL "Address2"
+  SQL-WIDTH 70
+  HELP "Please enter an address."
+  ORDER 50
+
+ADD FIELD "City" OF "Customer" AS character 
+  FORMAT "x(25)"
+  INITIAL ""
+  LABEL "City"
+  SQL-WIDTH 50
+  HELP "Please enter a city."
+  ORDER 60
+
+ADD FIELD "State" OF "Customer" AS character 
+  DESCRIPTION "Label/Valexp/Valmsg/Help are set based on value of NON-US field!"
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "State"
+  SQL-WIDTH 40
+  HELP "Please enter standard state abbreviation."
+  ORDER 70
+
+ADD FIELD "Country" OF "Customer" AS character 
+  FORMAT "x(20)"
+  INITIAL "USA"
+  LABEL "Country"
+  SQL-WIDTH 40
+  HELP "Please enter a country."
+  ORDER 15
+
+ADD FIELD "Phone" OF "Customer" AS character 
+  DESCRIPTION "Format/Label/Help based on status of NON-US field."
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Phone"
+  SQL-WIDTH 40
+  HELP "Please enter a phone number"
+  ORDER 115
+
+ADD FIELD "Contact" OF "Customer" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Contact"
+  SQL-WIDTH 60
+  HELP "Please enter a contact."
+  ORDER 110
+
+ADD FIELD "SalesRep" OF "Customer" AS character 
+  FORMAT "x(4)"
+  INITIAL ""
+  LABEL "Sales Rep"
+  SQL-WIDTH 8
+  VALEXP "CAN-FIND(Salesrep OF Customer)"
+  VALMSG "The Sales Rep's name you've entered must exist in the Salesrep table."
+  HELP "Please Enter a Sales Rep."
+  ORDER 125
+
+ADD FIELD "Comments" OF "Customer" AS character 
+  FORMAT "x(80)"
+  INITIAL ""
+  LABEL "Comments"
+  SQL-WIDTH 160
+  HELP "Please enter comments."
+  ORDER 180
+
+ADD FIELD "CreditLimit" OF "Customer" AS decimal 
+  DESCRIPTION "Maximum credit"
+  FORMAT "->,>>>,>>9"
+  INITIAL "1500"
+  LABEL "Credit Limit"
+  SQL-WIDTH 17
+  VALEXP "CreditLimit >= 0 AND CreditLimit <= 9999999"
+  VALMSG "Credit Limit must be >= 0 and <= 9,999,999"
+  HELP "Please enter a Credit Limit."
+  DECIMALS 2
+  ORDER 130
+
+ADD FIELD "Balance" OF "Customer" AS decimal 
+  FORMAT "->,>>>,>>9.99"
+  INITIAL "0"
+  LABEL "Balance"
+  SQL-WIDTH 17
+  HELP "Please enter a balance."
+  DECIMALS 2
+  ORDER 140
+
+ADD FIELD "Terms" OF "Customer" AS character 
+  FORMAT "x(20)"
+  INITIAL "Net30"
+  LABEL "Terms"
+  SQL-WIDTH 40
+  HELP "Please enter terms"
+  ORDER 150
+
+ADD FIELD "Discount" OF "Customer" AS integer 
+  FORMAT ">>9%"
+  INITIAL "0"
+  LABEL "Discount"
+  SQL-WIDTH 4
+  VALEXP "Discount >= 0"
+  VALMSG "Discount must be greater or equal to 0"
+  HELP "Please enter a percentage from 0 to 100."
+  ORDER 170
+
+ADD FIELD "PostalCode" OF "Customer" AS character 
+  DESCRIPTION "Format/Label/Help Message based on status of NON-US field."
+  FORMAT "x(10)"
+  INITIAL ""
+  LABEL "Postal Code"
+  SQL-WIDTH 20
+  HELP "Please enter the appropriate Postal Code."
+  ORDER 80
+
+ADD FIELD "Fax" OF "Customer" AS character 
+  DESCRIPTION "Format/Label/Help based on status of NON-US field."
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Fax"
+  SQL-WIDTH 40
+  HELP "Please enter a fax number."
+  ORDER 190
+
+ADD FIELD "EmailAddress" OF "Customer" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Email"
+  SQL-WIDTH 100
+  HELP "Please enter an full Internet Email Address."
+  LENGTH 0
+  ORDER 200
+
+ADD INDEX "CustNum" ON "Customer" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CustNum" ASCENDING 
+
+ADD INDEX "Comments" ON "Customer" 
+  WORD
+  INDEX-FIELD "Comments" ASCENDING 
+
+ADD INDEX "CountryPost" ON "Customer" 
+  INDEX-FIELD "Country" ASCENDING
+  INDEX-FIELD "PostalCode" ASCENDING 
+
+ADD INDEX "Name" ON "Customer" 
+  INDEX-FIELD "Name" ASCENDING
+
+ADD INDEX "SalesRep" ON "Customer" 
+  INDEX-FIELD "SalesRep" ASCENDING
+
+ADD TABLE "testtable1"
+  DUMP-NAME "a"
+
+ADD FIELD "field1" OF "testtable1" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  SQL-WIDTH 4
+  ORDER 10
+
+ADD FIELD "field2" OF "testtable1" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  SQL-WIDTH 1
+  ORDER 20
+
+ADD FIELD "field3" OF "testtable1" AS character 
+  FORMAT "X(8)"
+  INITIAL ""
+  SQL-WIDTH 16
+  ORDER 30
+
+ADD FIELD "field4" OF "testtable1" AS character 
+  FORMAT "X(8)"
+  INITIAL ""
+  SQL-WIDTH 16
+  ORDER 40
+
+ADD INDEX "idx1" ON "testtable1" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "field1" ASCENDING 
+  INDEX-FIELD "field2" ASCENDING 
+  INDEX-FIELD "field3" ASCENDING 
+
+ADD TABLE "Salesrep"
+  DESCRIPTION "The salesrep table contains sales representative information"
+  VALEXP "NOT CAN-FIND(FIRST Customer Of Salesrep)"
+  VALMSG "Cannot delete if used in one or more customer records."
+  DUMP-NAME "salesrep"
+
+ADD FIELD "RepName" OF "Salesrep" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Rep Name"
+  SQL-WIDTH 60
+  HELP "Please enter the Name of the Salesperson."
+  ORDER 20
+
+ADD FIELD "Region" OF "Salesrep" AS character 
+  FORMAT "x(8)"
+  INITIAL ""
+  LABEL "Region"
+  SQL-WIDTH 16
+  HELP "Please enter the Sales Region covered by this salesman."
+  ORDER 30
+
+ADD FIELD "SalesRep" OF "Salesrep" AS character 
+  FORMAT "x(4)"
+  INITIAL ""
+  LABEL "Sales Rep"
+  SQL-WIDTH 8
+  HELP "Please enter the Sales Rep."
+  ORDER 1
+
+ADD FIELD "MonthQuota" OF "Salesrep" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "Month Quota"
+  SQL-WIDTH 264
+  HELP "Please enter the Month Quota."
+  EXTENT 12
+  ORDER 40
+
+ADD INDEX "SalesRep" ON "Salesrep" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "SalesRep" ASCENDING 
+
+ADD TABLE "Order"
+  DESCRIPTION "The order table contains order header information."
+  VALEXP "1 = 1"
+  DUMP-NAME "order"
+
+ADD FIELD "Ordernum" OF "Order" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Order Num"
+  SQL-WIDTH 4
+  VALEXP "ordernum > 0"
+  VALMSG "Order number must be greater than zero"
+  HELP "Please enter an order number."
+  ORDER 10
+
+ADD FIELD "CustNum" OF "Order" AS integer 
+  DESCRIPTION "                                                       Help:Name"
+  FORMAT ">>>>9"
+  INITIAL "0"
+  LABEL "Cust Num"
+  SQL-WIDTH 4
+  VALEXP "CAN-FIND(customer OF order)"
+  VALMSG "Customer must already exist."
+  HELP "Please enter an existing customer number."
+  ORDER 20
+
+ADD FIELD "OrderDate" OF "Order" AS date 
+  FORMAT "99/99/99"
+  INITIAL "TODAY"
+  LABEL "Ordered"
+  SQL-WIDTH 4
+  HELP "Please enter the date of order."
+  ORDER 90
+
+ADD FIELD "ShipDate" OF "Order" AS date 
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Shipped"
+  SQL-WIDTH 4
+  HELP "Please enter the ship date."
+  ORDER 100
+
+ADD FIELD "PromiseDate" OF "Order" AS date 
+  FORMAT "99/99/99"
+  INITIAL ?
+  LABEL "Promised"
+  SQL-WIDTH 4
+  HELP "Please enter the Promise Date."
+  ORDER 110
+
+ADD FIELD "Carrier" OF "Order" AS character 
+  DESCRIPTION "Should lookup valid carriers."
+  FORMAT "x(25)"
+  INITIAL ""
+  LABEL "Carrier"
+  SQL-WIDTH 50
+  HELP "Please enter the carrier."
+  ORDER 120
+
+ADD FIELD "Instructions" OF "Order" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Instructions"
+  SQL-WIDTH 100
+  HELP "Please enter Instructions"
+  ORDER 130
+
+ADD FIELD "PO" OF "Order" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "PO"
+  SQL-WIDTH 40
+  HELP "Please enter the PO."
+  ORDER 140
+
+ADD FIELD "Terms" OF "Order" AS character 
+  DESCRIPTION "This should default to the TERMS specified by the CUSTOMER record."
+  FORMAT "x(20)"
+  INITIAL "Net30"
+  LABEL "Terms"
+  SQL-WIDTH 40
+  HELP "Please enter the terms."
+  ORDER 150
+
+ADD FIELD "SalesRep" OF "Order" AS character 
+  FORMAT "x(4)"
+  INITIAL ""
+  LABEL "Sales Rep"
+  SQL-WIDTH 8
+  HELP "Please enter the Sales Rep."
+  ORDER 160
+
+ADD FIELD "BillToID" OF "Order" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Bill To ID"
+  SQL-WIDTH 4
+  HELP "Please enter the BillTo ID."
+  ORDER 170
+
+ADD FIELD "ShipToID" OF "Order" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Ship To ID"
+  SQL-WIDTH 4
+  HELP "Please enter the ShipToID."
+  ORDER 180
+
+ADD FIELD "OrderStatus" OF "Order" AS character 
+  FORMAT "x(20)"
+  INITIAL "Ordered"
+  LABEL "Order Status"
+  SQL-WIDTH 40
+  VIEW-AS "VIEW-AS COMBO-BOX
+  LIST-ITEMS ""Ordered"",""Back Ordered"", ""Partially Shipped"", ""Shipped""
+   
+  
+  "
+  HELP "Please enter the Order Status."
+  ORDER 190
+
+ADD FIELD "WarehouseNum" OF "Order" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Warehouse Num"
+  SQL-WIDTH 4
+  VALEXP "(warehousenum = 0) or can-find(warehouse of order)"
+  VALMSG "Entrer a number greater than zero"
+  HELP "Please enter the Warehouse Number."
+  ORDER 200
+
+ADD FIELD "Creditcard" OF "Order" AS character 
+  FORMAT "x(20)"
+  INITIAL "Visa"
+  LABEL "Credit Card"
+  SQL-WIDTH 40
+  VIEW-AS "VIEW-AS COMBO-BOX
+  LIST-ITEMS ""Visa"",""American Express"", ""Master Card""
+   "
+  HELP "Please enter the credit card."
+  ORDER 210
+
+ADD INDEX "OrderNum" ON "Order" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Ordernum" ASCENDING 
+
+ADD INDEX "CustOrder" ON "Order" 
+  UNIQUE
+  INDEX-FIELD "CustNum" ASCENDING 
+  INDEX-FIELD "Ordernum" ASCENDING 
+
+ADD INDEX "OrderDate" ON "Order" 
+  INDEX-FIELD "OrderDate" ASCENDING
+
+ADD INDEX "OrderStatus" ON "Order" 
+  INDEX-FIELD "OrderStatus" ASCENDING
+
+ADD INDEX "SalesRep" ON "Order" 
+  INDEX-FIELD "SalesRep" ASCENDING
+
+ADD TABLE "Invoice"
+  DESCRIPTION "The invoice table contains transactions for the receivable module."
+  DUMP-NAME "invoice"
+
+ADD FIELD "Invoicenum" OF "Invoice" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Invoice Num"
+  SQL-WIDTH 4
+  VALEXP "invoicenum > 0"
+  VALMSG "Invoice number cannot be zero"
+  HELP "Please enter an Invoice Number"
+  ORDER 10
+
+ADD FIELD "CustNum" OF "Invoice" AS integer 
+  FORMAT ">>>>9"
+  INITIAL "0"
+  LABEL "Cust Num"
+  SQL-WIDTH 4
+  VALEXP "CAN-FIND(customer OF invoice)"
+  VALMSG "The Customer number entered must be a valid one."
+  HELP "Please enter a customer number."
+  ORDER 20
+
+ADD FIELD "InvoiceDate" OF "Invoice" AS date 
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Invoice Date"
+  SQL-WIDTH 4
+  HELP "Please enter an invoice date"
+  ORDER 30
+
+ADD FIELD "Amount" OF "Invoice" AS decimal 
+  FORMAT "->>,>>9.99"
+  INITIAL "0"
+  LABEL "Amount"
+  SQL-WIDTH 17
+  HELP "Please enter total invoice amt including shipping and sales."
+  DECIMALS 2
+  ORDER 40
+
+ADD FIELD "TotalPaid" OF "Invoice" AS decimal 
+  FORMAT "->>,>>9.99"
+  INITIAL "0"
+  LABEL "Total Paid"
+  SQL-WIDTH 17
+  HELP "Please enter Total Paid."
+  DECIMALS 2
+  ORDER 50
+
+ADD FIELD "Adjustment" OF "Invoice" AS decimal 
+  FORMAT "->>,>>9.99"
+  INITIAL "0"
+  LABEL "Adjustment"
+  SQL-WIDTH 17
+  HELP "Please enter adjustment."
+  DECIMALS 2
+  ORDER 60
+
+ADD FIELD "OrderNum" OF "Invoice" AS integer 
+  FORMAT "zzzzzzzzz9"
+  INITIAL "0"
+  LABEL "Order Num"
+  SQL-WIDTH 4
+  VALMSG "The Order number entered must be a valid one."
+  HELP "Please enter an order number."
+  ORDER 80
+
+ADD FIELD "ShipCharge" OF "Invoice" AS decimal 
+  FORMAT "->>,>>9.99"
+  INITIAL "0"
+  LABEL "Ship Charge"
+  SQL-WIDTH 17
+  HELP "Please enter a Ship Charge."
+  DECIMALS 2
+  ORDER 120
+
+ADD INDEX "InvoiceNum" ON "Invoice" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Invoicenum" ASCENDING 
+
+ADD INDEX "CustNum" ON "Invoice" 
+  INDEX-FIELD "CustNum" ASCENDING
+
+ADD INDEX "InvoiceDate" ON "Invoice" 
+  INDEX-FIELD "InvoiceDate" ASCENDING
+
+ADD INDEX "OrderNum" ON "Invoice" 
+  INDEX-FIELD "OrderNum" ASCENDING
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000013059

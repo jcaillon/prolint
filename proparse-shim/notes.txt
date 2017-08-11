@@ -1,0 +1,43 @@
+
+
+Package Description
+===================
+This packaged provides backward compatability from old C++ API into new Proparse.Net.
+DO NOT USE THIS FOR NEW CODE!
+Anything using this old API can be made faster and cleaner by using
+direct access to the classes and objects in Proparse.Net.
+
+
+Implementation notes
+====================
+
+- This new .Net API has to use schemadump1/2.p, so these are left out:
+    - parserSchemaAddDb
+    - parserSchemaAddTable
+
+
+- These are not used by Prolint, and are left out:
+	- parserDictAdd
+	- parserDictDelete
+	- parserDiff
+	- parserGetTokenTypeNumber
+	- parserHiddenAddToFront
+	- parserHiddenDelete
+	- parserHiddenInsertAfter
+    - parserHiddenSetText
+	- parserHiddenSetType
+	- parserIwdiff
+	- parserNodeCreate
+	- parserNodeCreateI
+    - parserParseCreate
+    - parserParseDelete
+    - parserParseGetTop
+	- parserSetNodeFirstChild
+	- parserSetNodeNextSibling
+	- parserSetNodeText
+	- parserSetNodeType
+	- parserSetNodeTypeI
+	- parserWriteNode
+
+
+

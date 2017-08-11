@@ -1,0 +1,240 @@
+UPDATE DATABASE "?"
+
+ADD TABLE "lint_warning"
+  DUMP-NAME "lint_war"
+
+ADD FIELD "compunit" OF "lint_warning" AS character 
+  FORMAT "X(64)"
+  INITIAL ""
+  ORDER 10
+
+ADD FIELD "comment" OF "lint_warning" AS character 
+  FORMAT "X(150)"
+  INITIAL ""
+  ORDER 20
+
+ADD FIELD "sourcefile" OF "lint_warning" AS character 
+  FORMAT "X(64)"
+  INITIAL ""
+  ORDER 30
+
+ADD FIELD "linenumber" OF "lint_warning" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  ORDER 40
+
+ADD FIELD "ruleid" OF "lint_warning" AS character 
+  FORMAT "X(15)"
+  INITIAL ""
+  ORDER 50
+
+ADD FIELD "severity" OF "lint_warning" AS integer 
+  FORMAT ">9"
+  INITIAL "0"
+  ORDER 60
+
+ADD FIELD "lintdate" OF "lint_warning" AS date 
+  FORMAT "99/99/99"
+  INITIAL ?
+  ORDER 70
+
+ADD FIELD "subdir" OF "lint_warning" AS character 
+  FORMAT "X(32)"
+  INITIAL ""
+  ORDER 80
+
+ADD INDEX "idx_cu" ON "lint_warning" 
+  PRIMARY
+  INDEX-FIELD "compunit" ASCENDING 
+
+ADD INDEX "idx_line" ON "lint_warning" 
+  INDEX-FIELD "linenumber" ASCENDING
+
+ADD INDEX "idx_rule" ON "lint_warning" 
+  INDEX-FIELD "ruleid" ASCENDING
+
+ADD INDEX "idx_severity" ON "lint_warning" 
+  INDEX-FIELD "severity" ASCENDING
+
+ADD INDEX "idx_sourcefile" ON "lint_warning" 
+  INDEX-FIELD "sourcefile" ASCENDING
+
+ADD INDEX "idx_subdir" ON "lint_warning" 
+  INDEX-FIELD "subdir" ASCENDING
+
+ADD TABLE "lint_stat_rule"
+  DUMP-NAME "lint_s1"
+
+ADD FIELD "ruleid" OF "lint_stat_rule" AS character 
+  FORMAT "X(15)"
+  INITIAL ""
+  ORDER 10
+
+ADD FIELD "numwarnings" OF "lint_stat_rule" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "num warnings"
+  ORDER 20
+
+ADD FIELD "score" OF "lint_stat_rule" AS integer 
+  FORMAT "->>,>>>,>>9"
+  INITIAL "0"
+  ORDER 30
+
+ADD FIELD "severity" OF "lint_stat_rule" AS integer 
+  FORMAT ">9"
+  INITIAL "0"
+  ORDER 40
+
+ADD INDEX "idx_rule" ON "lint_stat_rule" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "ruleid" ASCENDING 
+
+ADD INDEX "idx_num" ON "lint_stat_rule" 
+  INDEX-FIELD "numwarnings" DESCENDING
+
+ADD INDEX "idx_score" ON "lint_stat_rule" 
+  INDEX-FIELD "score" DESCENDING
+
+ADD TABLE "lint_stat_subdir"
+  DUMP-NAME "lint_s2"
+
+ADD FIELD "subdir" OF "lint_stat_subdir" AS character 
+  FORMAT "X(64)"
+  INITIAL ""
+  ORDER 10
+
+ADD FIELD "numwarnings" OF "lint_stat_subdir" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "num warnings"
+  ORDER 20
+
+ADD FIELD "score" OF "lint_stat_subdir" AS integer 
+  FORMAT "->>,>>>,>>9"
+  INITIAL "0"
+  ORDER 30
+
+ADD FIELD "severity" OF "lint_stat_subdir" AS integer 
+  FORMAT ">9"
+  INITIAL "0"
+  LABEL "high severity"
+  ORDER 40
+
+ADD INDEX "idx_subdir" ON "lint_stat_subdir" 
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "subdir" ASCENDING 
+
+ADD INDEX "idx_num" ON "lint_stat_subdir" 
+  INDEX-FIELD "numwarnings" ASCENDING
+
+ADD INDEX "idx_score" ON "lint_stat_subdir" 
+  INDEX-FIELD "score" ASCENDING
+
+ADD INDEX "idx_severity" ON "lint_stat_subdir" 
+  INDEX-FIELD "severity" ASCENDING
+
+ADD TABLE "lint_stat_ruledir"
+  DUMP-NAME "lint_s3"
+
+ADD FIELD "subdir" OF "lint_stat_ruledir" AS character 
+  FORMAT "X(32)"
+  INITIAL ""
+  ORDER 10
+
+ADD FIELD "ruleid" OF "lint_stat_ruledir" AS character 
+  FORMAT "X(15)"
+  INITIAL ""
+  ORDER 20
+
+ADD FIELD "severity" OF "lint_stat_ruledir" AS integer 
+  FORMAT ">9"
+  INITIAL "0"
+  ORDER 30
+
+ADD FIELD "numwarnings" OF "lint_stat_ruledir" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "num warnings"
+  ORDER 40
+
+ADD FIELD "score" OF "lint_stat_ruledir" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  ORDER 50
+
+ADD INDEX "idx_subdir" ON "lint_stat_ruledir" 
+  PRIMARY
+  INDEX-FIELD "subdir" ASCENDING 
+
+ADD INDEX "idx_rule" ON "lint_stat_ruledir" 
+  INDEX-FIELD "ruleid" ASCENDING
+
+ADD INDEX "idx_score" ON "lint_stat_ruledir" 
+  INDEX-FIELD "score" DESCENDING
+
+ADD INDEX "idx_severity" ON "lint_stat_ruledir" 
+  INDEX-FIELD "severity" DESCENDING
+
+ADD INDEX "idx_warnings" ON "lint_stat_ruledir" 
+  INDEX-FIELD "numwarnings" DESCENDING
+
+ADD TABLE "lint_stat_inc"
+  DUMP-NAME "lint_s4"
+
+ADD FIELD "sourcefile" OF "lint_stat_inc" AS character 
+  FORMAT "X(32)"
+  INITIAL ""
+  ORDER 10
+
+ADD FIELD "ruleid" OF "lint_stat_inc" AS character 
+  FORMAT "X(15)"
+  INITIAL ""
+  ORDER 30
+
+ADD FIELD "numwarnings" OF "lint_stat_inc" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "num warnings"
+  ORDER 40
+
+ADD FIELD "distinctwarnings" OF "lint_stat_inc" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  LABEL "distinct warnings"
+  ORDER 50
+
+ADD FIELD "score" OF "lint_stat_inc" AS integer 
+  FORMAT "->>,>>>,>>9"
+  INITIAL "0"
+  LABEL "total score"
+  ORDER 60
+
+ADD FIELD "scoredistinct" OF "lint_stat_inc" AS decimal 
+  FORMAT "->>>,>>9"
+  INITIAL "0"
+  LABEL "score / distinct"
+  DECIMALS 2
+  ORDER 70
+
+ADD INDEX "idx_source" ON "lint_stat_inc" 
+  PRIMARY
+  INDEX-FIELD "sourcefile" ASCENDING 
+
+ADD INDEX "idx_effect" ON "lint_stat_inc" 
+  INDEX-FIELD "scoredistinct" DESCENDING
+
+ADD INDEX "idx_numwarnings" ON "lint_stat_inc" 
+  INDEX-FIELD "numwarnings" DESCENDING
+
+ADD INDEX "idx_ruleid" ON "lint_stat_inc" 
+  INDEX-FIELD "ruleid" ASCENDING
+
+ADD INDEX "idx_score" ON "lint_stat_inc" 
+  INDEX-FIELD "score" DESCENDING
+
+.
+PSC
+cpstream=ISO8859-1

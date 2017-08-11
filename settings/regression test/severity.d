@@ -1,0 +1,1 @@
+yes "abbrevkwd" 0

@@ -1,0 +1,91 @@
+ADD TABLE "lint_session"
+  DUMP-NAME "lint_ses"
+
+ADD FIELD "sessionid" OF "lint_session" AS integer 
+  FORMAT ">>>>>>>>>9"
+  INITIAL ?
+  ORDER 10
+
+ADD FIELD "sessionuser" OF "lint_session" AS character 
+  FORMAT "x(16)"
+  INITIAL ""
+  ORDER 30
+
+ADD FIELD "sessionbox" OF "lint_session" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  ORDER 40
+
+ADD FIELD "sessionrules" OF "lint_session" AS character 
+  FORMAT "x(60)"
+  INITIAL ""
+  ORDER 50
+
+ADD FIELD "sessionparms" OF "lint_session" AS character 
+  FORMAT "x(40)"
+  INITIAL ""
+  ORDER 60
+
+ADD FIELD "sessionname" OF "lint_session" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  ORDER 70
+
+ADD FIELD "sessionStartDate" OF "lint_session" AS date 
+  FORMAT "99/99/99"
+  INITIAL "today"
+  ORDER 20
+
+ADD FIELD "sessionStartTime" OF "lint_session" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL ""
+  ORDER 25
+
+ADD FIELD "sessionLastDate" OF "lint_session" AS date 
+  FORMAT "99/99/99"
+  INITIAL ?
+  ORDER 80
+
+ADD FIELD "sessionLastTime" OF "lint_session" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL "0"
+  ORDER 90
+
+ADD INDEX "key" ON "lint_session" 
+  UNIQUE
+  PRIMARY
+  DESCRIPTION "Primary Unique Key"
+  INDEX-FIELD "sessionid" ASCENDING 
+
+ADD INDEX "sessionname" ON "lint_session" 
+  INDEX-FIELD "sessionname" ASCENDING
+
+ADD INDEX "sessionstart" ON "lint_session" 
+  INDEX-FIELD "sessionStartDate" ASCENDING
+  INDEX-FIELD "sessionStartTime" ASCENDING 
+
+ADD INDEX "sessionuser" ON "lint_session" 
+  INDEX-FIELD "sessionuser" ASCENDING
+
+ADD FIELD "sessionid" OF "lint_warning" AS integer
+  DESCRIPTION ""
+  FORMAT ">>>>>>>>>9"
+  INITIAL "0"
+  ORDER 90
+
+ADD INDEX "idx_session" ON "lint_warning"
+  INDEX-FIELD "sessionid" ASCENDING
+  INDEX-FIELD "compunit" ASCENDING
+
+ADD SEQUENCE "sessionid"
+  INITIAL 1
+  INCREMENT 1
+  CYCLE-ON-LIMIT yes
+  MIN-VAL ?
+  MAX-VAL 1999999999
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000003164
