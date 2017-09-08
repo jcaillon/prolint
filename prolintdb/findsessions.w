@@ -188,7 +188,6 @@ DEFINE FRAME Dialog-Frame
 /* Settings for THIS-PROCEDURE
    Type: Dialog-Box
    Allow: Basic,Browse,DB-Fields,Query
-   Other Settings: COMPILE
  */
 &ANALYZE-RESUME _END-PROCEDURE-SETTINGS
 

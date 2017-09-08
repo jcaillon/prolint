@@ -26,14 +26,14 @@
     You should have received a copy of the GNU Lesser General Public
     License along with Prolint; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-                 
+
 ------------------------------------------------------------------------*/
 /*          This .W file was created with the Progress AppBuilder.      */
 /*----------------------------------------------------------------------*/
 
-/* Create an unnamed pool to store all the widgets created 
+/* Create an unnamed pool to store all the widgets created
      by this procedure. This is a good default which assures
-     that this procedure's triggers and internal procedures 
+     that this procedure's triggers and internal procedures
      will execute in this procedure's storage, and that proper
      cleanup will occur on deletion of the procedure. */
 
@@ -65,10 +65,9 @@ DEFINE VARIABLE propsrunning AS LOGICAL NO-UNDO INITIAL FALSE.
 /* Standard List Definitions                                            */
 &Scoped-Define ENABLED-OBJECTS RECT-6 RECT-7 RECT-8 Btn_selectfiles ~
 Btn_config Btn_results Btn_current Btn_Open Btn_update Btn_dbsubdir ~
-Btn_dbrules Btn_dbsinc Btn_dbsession Btn_NewRule Btn_regression btn_tokenlister ~
+Btn_dbrules Btn_dbsinc Btn_dbsession Btn_NewRule Btn_regression ~
 Btn_protools Btn_Help lbl_release 
-&Scoped-Define DISPLAYED-OBJECTS EDITOR-3 EDITOR-2 EDITOR-1 EDITOR-4 ~
-EDITOR-11 EDITOR-5 EDITOR-12 EDITOR-9 EDITOR-10 lbl_release 
+&Scoped-Define DISPLAYED-OBJECTS lbl_release 
 
 /* Custom List Definitions                                              */
 /* List-1,List-2,List-3,List-4,List-5,List-6                            */
@@ -86,173 +85,147 @@ DEFINE VAR C-Win AS WIDGET-HANDLE NO-UNDO.
 /* Definitions of the field level widgets                               */
 DEFINE BUTTON Btn_config 
      LABEL "Configure" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_current 
      LABEL "Lint Active AB" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_dbrules 
      LABEL "By Rule" 
-     SIZE 16 BY 1.14.
-
-DEFINE BUTTON Btn_dbsinc 
-     LABEL "By includefile" 
-     SIZE 16 BY 1.14.
-
-DEFINE BUTTON Btn_dbsubdir 
-     LABEL "By subdir" 
-     SIZE 16 BY 1.14.
+     SIZE 16 BY 1.15.
 
 DEFINE BUTTON Btn_dbsession 
      LABEL "By session" 
-     SIZE 16 BY 1.14.
+     SIZE 16 BY 1.15.
+
+DEFINE BUTTON Btn_dbsinc 
+     LABEL "By includefile" 
+     SIZE 16 BY 1.15.
+
+DEFINE BUTTON Btn_dbsubdir 
+     LABEL "By subdir" 
+     SIZE 16 BY 1.15.
 
 DEFINE BUTTON Btn_Help 
      LABEL "Help" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_NewRule 
      LABEL "Add new rule" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_Open 
      LABEL "Lint Open AB" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_protools 
      LABEL "Add to protools" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_regression 
      LABEL "Regression-test" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_results 
      LABEL "Results Window" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_selectfiles 
      LABEL "Lint files..." 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON btn_tokenlister 
      LABEL "Tokenlister" 
-     SIZE 19 BY 1.14.
+     SIZE 19 BY 1.15.
 
 DEFINE BUTTON Btn_update 
      LABEL "Check for updates" 
-     SIZE 19 BY 1.14.
-
-DEFINE VARIABLE EDITOR-1 AS CHARACTER INITIAL "Show the Results Window from where you can do all sorts of things." 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.29
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-10 AS CHARACTER INITIAL "List the Proparse Tokens of a sourcefile" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.43
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-11 AS CHARACTER INITIAL "Lint all sources that are open in Appbuilder" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.05
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-12 AS CHARACTER INITIAL "Add a new rule to the list" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY .71
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-2 AS CHARACTER INITIAL "Create, modify or delete ~"Profiles~"" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.05
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-3 AS CHARACTER INITIAL "Select a profile, select some sourcefiles and run Prolint" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.1
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-4 AS CHARACTER INITIAL "Lint the source that is currently active in Appbuilder" 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.05
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-5 AS CHARACTER INITIAL "See if there is a newer Prolint release available on the internet." 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.29
-     BGCOLOR 8  NO-UNDO.
-
-DEFINE VARIABLE EDITOR-9 AS CHARACTER INITIAL "Run regression-tests for Prolint." 
-     VIEW-AS EDITOR LARGE NO-BOX
-     SIZE 52 BY 1.33
-     BGCOLOR 8  NO-UNDO.
+     SIZE 19 BY 1.15.
 
 DEFINE VARIABLE lbl_release AS CHARACTER FORMAT "X(256)":U 
       VIEW-AS TEXT 
-     SIZE 20 BY .62 NO-UNDO.
+     SIZE 43 BY .62 NO-UNDO.
 
 DEFINE RECTANGLE RECT-6
      EDGE-PIXELS 2 GRAPHIC-EDGE    
-     SIZE 75 BY 9.29
+     SIZE 87 BY 9.31
      BGCOLOR 8 FGCOLOR 8 .
 
 DEFINE RECTANGLE RECT-7
      EDGE-PIXELS 2 GRAPHIC-EDGE    
-     SIZE 75 BY 5.1
+     SIZE 87 BY 5.12
      BGCOLOR 8 FGCOLOR 8 .
 
 DEFINE RECTANGLE RECT-8
      EDGE-PIXELS 2 GRAPHIC-EDGE    
-     SIZE 75 BY 2
+     SIZE 87 BY 2
      BGCOLOR 8 FGCOLOR 8 .
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-     Btn_selectfiles AT ROW 2.57 COL 5
-     EDITOR-3 AT ROW 2.76 COL 25 NO-LABEL
-     Btn_config AT ROW 4.1 COL 5
-     EDITOR-2 AT ROW 4.33 COL 25 NO-LABEL
-     Btn_results AT ROW 5.52 COL 5
-     EDITOR-1 AT ROW 5.52 COL 25 NO-LABEL
-     Btn_current AT ROW 6.95 COL 5
-     EDITOR-4 AT ROW 7.19 COL 25 NO-LABEL
-     Btn_Open AT ROW 8.38 COL 5
-     EDITOR-11 AT ROW 8.62 COL 25 NO-LABEL
-     EDITOR-5 AT ROW 9.81 COL 25 NO-LABEL
-     Btn_update AT ROW 9.86 COL 5
-     Btn_dbsubdir AT ROW 12.81 COL 5
-     Btn_dbrules AT ROW 12.81 COL 23
-     Btn_dbsinc AT ROW 12.81 COL 41
-     Btn_dbsession AT ROW 12.81 COL 59
-     Btn_NewRule AT ROW 15.52 COL 5
-     EDITOR-12 AT ROW 15.76 COL 25 NO-LABEL
-     Btn_regression AT ROW 17 COL 5
-     EDITOR-9 AT ROW 17 COL 25 NO-LABEL
-     btn_tokenlister AT ROW 18.43 COL 5
-     EDITOR-10 AT ROW 18.43 COL 25 NO-LABEL
-     Btn_protools AT ROW 20.76 COL 39
-     Btn_Help AT ROW 20.76 COL 59
-     lbl_release AT ROW 21 COL 1 COLON-ALIGNED NO-LABEL
-     "Query Prolintdb:" VIEW-AS TEXT
-          SIZE 20 BY .62 AT ROW 11.71 COL 3
-          FONT 6
-     "Developing Prolint:" VIEW-AS TEXT
-          SIZE 22.8 BY .62 AT ROW 14.57 COL 3
-          FONT 6
+     Btn_selectfiles AT ROW 2.85 COL 5
+     Btn_config AT ROW 4.38 COL 5
+     Btn_results AT ROW 5.81 COL 5
+     Btn_current AT ROW 7.23 COL 5
+     Btn_Open AT ROW 8.65 COL 5
+     Btn_update AT ROW 10.19 COL 5
+     Btn_dbsubdir AT ROW 13.96 COL 5
+     Btn_dbrules AT ROW 14 COL 28
+     Btn_dbsinc AT ROW 14 COL 50
+     Btn_dbsession AT ROW 14 COL 72
+     Btn_NewRule AT ROW 17.69 COL 5
+     Btn_regression AT ROW 19.19 COL 5
+     btn_tokenlister AT ROW 20.62 COL 5
+     Btn_protools AT ROW 23 COL 51
+     Btn_Help AT ROW 23 COL 71
+     lbl_release AT ROW 22.77 COL 1 COLON-ALIGNED NO-LABEL
+     "Run regression-tests for Prolint." VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 19.42 COL 25
+          BGCOLOR 8 FGCOLOR 0 
      "Using Prolint:" VIEW-AS TEXT
-          SIZE 16 BY .62 AT ROW 1.57 COL 3
+          SIZE 16 BY .65 AT ROW 1.58 COL 3
           FONT 6
-     RECT-6 AT ROW 2.19 COL 3
-     RECT-7 AT ROW 15.19 COL 3
-     RECT-8 AT ROW 12.33 COL 3
+     "Query Prolintdb:" VIEW-AS TEXT
+          SIZE 20 BY .62 AT ROW 12.54 COL 3
+          FONT 6
+     "Select a profile, select some sourcefiles and run Prolint" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 3.12 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Create, modify or delete ~"Profiles~"" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 4.62 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Show the Results Window from where you can do all sorts of things" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 6.04 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Lint the source that is currently active in Appbuilder" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 7.46 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Lint all sources that are open in Appbuilder" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 8.92 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "See if there is a newer Prolint release available on the internet." VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 10.42 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Proparse tools, easy access to the invaluable Tokenlister." VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 20.85 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     "Developing Prolint:" VIEW-AS TEXT
+          SIZE 22.86 BY .62 AT ROW 16.23 COL 3
+          FONT 6
+     "Add a new rule to the list" VIEW-AS TEXT
+          SIZE 64 BY .65 AT ROW 17.96 COL 25
+          BGCOLOR 8 FGCOLOR 0 
+     RECT-6 AT ROW 2.54 COL 3
+     RECT-7 AT ROW 17.23 COL 3
+     RECT-8 AT ROW 13.54 COL 3
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
          SIDE-LABELS NO-UNDERLINE THREE-D 
          AT COL 1 ROW 1
-         SIZE 80 BY 21.38.
+         SIZE 90.72 BY 23.58
+         FONT 1.
 
 
 /* *********************** Procedure Settings ************************ */
@@ -271,13 +244,14 @@ IF SESSION:DISPLAY-TYPE = "GUI":U THEN
   CREATE WINDOW C-Win ASSIGN
          HIDDEN             = YES
          TITLE              = "Prolint Desktop"
-         HEIGHT             = 21.38
-         WIDTH              = 80
-         MAX-HEIGHT         = 23.29
-         MAX-WIDTH          = 80
-         VIRTUAL-HEIGHT     = 23.29
-         VIRTUAL-WIDTH      = 80
-         RESIZE             = yes
+         HEIGHT             = 23.58
+         WIDTH              = 90.86
+         MAX-HEIGHT         = 23.58
+         MAX-WIDTH          = 109.57
+         VIRTUAL-HEIGHT     = 23.58
+         VIRTUAL-WIDTH      = 109.57
+         MAX-BUTTON         = no
+         RESIZE             = no
          SCROLL-BARS        = no
          STATUS-AREA        = no
          BGCOLOR            = ?
@@ -305,51 +279,8 @@ IF NOT C-Win:LOAD-ICON("prolint/images/prolint.ico":U) THEN
   VISIBLE,,RUN-PERSISTENT                                               */
 /* SETTINGS FOR FRAME DEFAULT-FRAME
    FRAME-NAME                                                           */
-/* SETTINGS FOR EDITOR EDITOR-1 IN FRAME DEFAULT-FRAME
+/* SETTINGS FOR BUTTON btn_tokenlister IN FRAME DEFAULT-FRAME
    NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-1:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-10 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-10:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-11 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-11:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-12 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-12:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-2 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-2:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-3 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-3:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-4 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-4:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-5 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-5:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
-/* SETTINGS FOR EDITOR EDITOR-9 IN FRAME DEFAULT-FRAME
-   NO-ENABLE                                                            */
-ASSIGN 
-       EDITOR-9:READ-ONLY IN FRAME DEFAULT-FRAME        = TRUE.
-
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
 THEN C-Win:HIDDEN = no.
 
@@ -416,7 +347,23 @@ ON CHOOSE OF Btn_dbrules IN FRAME DEFAULT-FRAME /* By Rule */
 DO:
   IF CONNECTED("prolintdb":U) THEN
      RUN prolint/prolintdb/rulestats.w.
-  ELSE 
+  ELSE
+      MESSAGE "Database prolintdb is not connected." SKIP
+              "See help-topic prolintdb to learn about this feature."
+              VIEW-AS ALERT-BOX.
+END.
+
+/* _UIB-CODE-BLOCK-END */
+&ANALYZE-RESUME
+
+
+&Scoped-define SELF-NAME Btn_dbsession
+&ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL Btn_dbsession C-Win
+ON CHOOSE OF Btn_dbsession IN FRAME DEFAULT-FRAME /* By session */
+DO:
+  IF CONNECTED("prolintdb":U) THEN
+     RUN prolint/prolintdb/lintstats.p NO-ERROR.
+  ELSE
       MESSAGE "Database prolintdb is not connected." SKIP
               "See help-topic prolintdb to learn about this feature."
               VIEW-AS ALERT-BOX.
@@ -432,7 +379,7 @@ ON CHOOSE OF Btn_dbsinc IN FRAME DEFAULT-FRAME /* By includefile */
 DO:
   IF CONNECTED("prolintdb":U) THEN
      RUN prolint/prolintdb/incstats.w.
-  ELSE 
+  ELSE
       MESSAGE "Database prolintdb is not connected." SKIP
               "See help-topic prolintdb to learn about this feature."
               VIEW-AS ALERT-BOX.
@@ -448,23 +395,7 @@ ON CHOOSE OF Btn_dbsubdir IN FRAME DEFAULT-FRAME /* By subdir */
 DO:
   IF CONNECTED("prolintdb":U) THEN
      RUN prolint/prolintdb/dirstats.w.
-  ELSE 
-      MESSAGE "Database prolintdb is not connected." SKIP
-              "See help-topic prolintdb to learn about this feature."
-              VIEW-AS ALERT-BOX.
-END.
-
-/* _UIB-CODE-BLOCK-END */
-&ANALYZE-RESUME
-
-
-&Scoped-define SELF-NAME Btn_dbsession
-&ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL Btn_dbsession C-Win
-ON CHOOSE OF Btn_dbsession IN FRAME DEFAULT-FRAME /* By subdir */
-DO:
-  IF CONNECTED("prolintdb":U) THEN
-     RUN prolint/prolintdb/lintstats.p NO-ERROR.
-  ELSE 
+  ELSE
       MESSAGE "Database prolintdb is not connected." SKIP
               "See help-topic prolintdb to learn about this feature."
               VIEW-AS ALERT-BOX.
@@ -513,7 +444,7 @@ ON CHOOSE OF Btn_protools IN FRAME DEFAULT-FRAME /* Add to protools */
 DO:
   DEFINE VARIABLE done AS LOGICAL NO-UNDO.
   RUN prolint/core/add2protools.p ("ADD":U, OUTPUT done).
-  IF done THEN 
+  IF done THEN
      Btn_protools:VISIBLE = FALSE.
 END.
 
@@ -559,21 +490,21 @@ END.
 
 &Scoped-define SELF-NAME btn_tokenlister
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL btn_tokenlister C-Win
-ON CHOOSE OF btn_tokenlister IN FRAME DEFAULT-FRAME /* Proparse launcher */
+ON CHOOSE OF btn_tokenlister IN FRAME DEFAULT-FRAME /* Tokenlister */
 DO:
   DEFINE VARIABLE filename    AS CHARACTER NO-UNDO.
   DEFINE VARIABLE tokenlister AS HANDLE    NO-UNDO.
   DEFINE VARIABLE go          AS LOGICAL   NO-UNDO.
   DEFINE VARIABLE attrList AS CHARACTER NO-UNDO INITIAL "linenum,filename":U.
 
-  IF OPSYS = 'UNIX':U THEN DO:  
+  IF OPSYS = 'UNIX':U THEN DO:
     RUN proparse/utilities/textprompt.w
         (INPUT "Enter the path and filename of the program to parse and list tokens for.~n",
          INPUT-OUTPUT filename
         ).
     IF RETURN-VALUE = "cancel" THEN
        RETURN.
-  
+
     FILE-INFO:FILE-NAME = filename.
     IF FILE-INFO:FILE-TYPE = ?
     OR INDEX(FILE-INFO:FILE-TYPE, "F":U) = 0 THEN DO:
@@ -581,8 +512,8 @@ DO:
       RETURN.
     END.
   END. /* opsys = unix */
-  
-  ELSE DO: 
+
+  ELSE DO:
     ASSIGN go = NO.
     SYSTEM-DIALOG GET-FILE filename MUST-EXIST TITLE "Tokenlister" UPDATE go.
     IF NOT go THEN RETURN.
@@ -591,7 +522,7 @@ DO:
   /* Prompt for the node attributes to display */
   RUN prolint/proparse-shim/utilities/attrs_prompt.w (INPUT-OUTPUT attrList).
 
-  &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN HIDE ALL. 
+  &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN HIDE ALL.
   &ENDIF
 
   RUN prolint/proparse-shim/utilities/tokenlister.p PERSISTENT SET tokenlister.
@@ -600,9 +531,9 @@ DO:
   RUN main IN tokenlister.
   APPLY "CLOSE":U TO tokenlister.
 
-  &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN VIEW FRAME default-frame. 
+  &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN VIEW FRAME default-frame.
   &ENDIF
-  
+
 END.
 
 /* _UIB-CODE-BLOCK-END */
@@ -627,47 +558,59 @@ END.
 
 /* ***************************  Main Block  *************************** */
 
-/* Set CURRENT-WINDOW: this will parent dialog-boxes and frames.        */
-ASSIGN CURRENT-WINDOW                = {&WINDOW-NAME} 
-       THIS-PROCEDURE:CURRENT-WINDOW = {&WINDOW-NAME}.
+&IF INTEGER(ENTRY(1, PROVERSION, '.')) < 11 &THEN
+    ASSIGN C-Win:HIDDEN = YES.
+    MESSAGE "FATAL ERROR - This version of ProLint can only run using Progress | OpenEdge 10.2A or higher." VIEW-AS ALERT-BOX ERROR.
+    APPLY "WINDOW-CLOSE" TO C-Win.
+    RETURN "".
+&ELSE
+    /* Set CURRENT-WINDOW: this will parent dialog-boxes and frames.        */
+    ASSIGN CURRENT-WINDOW                = {&WINDOW-NAME}
+           THIS-PROCEDURE:CURRENT-WINDOW = {&WINDOW-NAME}.
 
-/* The CLOSE event can be used from inside or outside the procedure to  */
-/* terminate it.                                                        */
-ON CLOSE OF THIS-PROCEDURE 
-DO:
-   RUN disable_UI.
-   PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
-   IF propsrunning THEN
-      RUN DecrementProlintPropertySubscribers.
-END.
+    /* The CLOSE event can be used from inside or outside the procedure to  */
+    /* terminate it.                                                        */
+    ON CLOSE OF THIS-PROCEDURE
+    DO:
+       RUN disable_UI.
+       PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
+       IF propsrunning THEN
+          RUN DecrementProlintPropertySubscribers.
+    END.
 
-/* Best default for GUI applications is...                              */
-PAUSE 0 BEFORE-HIDE.
+    /* Best default for GUI applications is...                              */
+    PAUSE 0 BEFORE-HIDE.
 
-/* Now enable the interface and wait for the exit condition.            */
-/* (NOTE: handle ERROR and END-KEY so cleanup code will always fire.    */
-MAIN-BLOCK:
-DO ON ERROR   UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK
-   ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
-  RUN enable_UI.
+    /* Now enable the interface and wait for the exit condition.            */
+    /* (NOTE: handle ERROR and END-KEY so cleanup code will always fire.    */
+    MAIN-BLOCK:
+    DO ON ERROR   UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK
+       ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
+      RUN enable_UI.
 
-  PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
-  IF NOT propsrunning THEN
-     RUN prolint/core/propsuper.p PERSISTENT.
-  RUN IncrementProlintPropertySubscribers.
+      PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
+      IF NOT propsrunning THEN
+         RUN prolint/core/propsuper.p PERSISTENT.
+      RUN IncrementProlintPropertySubscribers.
 
-  DEFINE VARIABLE AlreadyInThere AS LOGICAL NO-UNDO.
-  RUN prolint/core/add2protools.p ("CHECK":U, OUTPUT AlreadyInThere).
-  IF AlreadyInThere THEN 
-     Btn_protools:VISIBLE = FALSE.
+      DEFINE VARIABLE AlreadyInThere AS LOGICAL NO-UNDO.
+      RUN prolint/core/add2protools.p ("CHECK":U, OUTPUT AlreadyInThere).
+      IF AlreadyInThere THEN
+         Btn_protools:VISIBLE = FALSE.
 
-  RUN DisplayRelease.
+      RUN DisplayRelease.
 
-  RUN CheckAdecomm.
+      RUN CheckAdecomm.
 
-  IF NOT THIS-PROCEDURE:PERSISTENT THEN
-    WAIT-FOR CLOSE OF THIS-PROCEDURE.
-END.
+      IF NOT THIS-PROCEDURE:PERSISTENT THEN
+        WAIT-FOR CLOSE OF THIS-PROCEDURE.
+    END.
+
+    /* Exit */
+    IF PROGRAM-NAME(2) = ? THEN
+        QUIT.
+    RETURN "".
+&ENDIF
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
@@ -680,16 +623,15 @@ PROCEDURE CheckAdecomm :
 /*------------------------------------------------------------------------------
   Purpose:     logwin.w requires adecomm.pl to be extracted
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
 
 IF SEARCH("adecomm/adestds.i":U)=? OR SEARCH("adecomm/peditor.i":U)=? THEN DO:
    /* Only give error if not compiled */
    IF SEARCH("prolint/desktop.r":U)=? THEN DO:
-       MESSAGE "Sorry you will need to extract src/adecomm.pl" SKIP 
+       MESSAGE "Sorry you will need to extract src/adecomm.pl" SKIP
                "I will now show you a help file with instructions"
                VIEW-AS ALERT-BOX ERROR.
-                                
        RUN prolint/core/openhtml.p( "http://oehive.org/node/229":U ).
    END.
 END.
@@ -721,9 +663,9 @@ END PROCEDURE.
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE DisplayRelease C-Win 
 PROCEDURE DisplayRelease :
 /*------------------------------------------------------------------------------
-  Purpose:     
+  Purpose:
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
    DEFINE VARIABLE cRelease  AS CHARACTER NO-UNDO.
    DEFINE VARIABLE cLine     AS CHARACTER NO-UNDO.
@@ -757,12 +699,11 @@ PROCEDURE enable_UI :
                These statements here are based on the "Other 
                Settings" section of the widget Property Sheets.
 ------------------------------------------------------------------------------*/
-  DISPLAY EDITOR-3 EDITOR-2 EDITOR-1 EDITOR-4 EDITOR-11 EDITOR-5 EDITOR-12 
-          EDITOR-9 EDITOR-10 lbl_release 
+  DISPLAY lbl_release 
       WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
   ENABLE RECT-6 RECT-7 RECT-8 Btn_selectfiles Btn_config Btn_results 
-         Btn_current Btn_Open Btn_update Btn_dbsubdir Btn_dbrules Btn_dbsinc Btn_dbsession  
-         Btn_NewRule Btn_regression btn_tokenlister Btn_protools Btn_Help 
+         Btn_current Btn_Open Btn_update Btn_dbsubdir Btn_dbrules Btn_dbsinc 
+         Btn_dbsession Btn_NewRule Btn_regression Btn_protools Btn_Help 
          lbl_release 
       WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
   {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}

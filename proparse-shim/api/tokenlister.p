@@ -41,8 +41,8 @@ DEFINE VARIABLE showStoretype   AS LOGICAL   NO-UNDO INITIAL FALSE.
 DEFINE VARIABLE showWindow      AS LOGICAL   NO-UNDO INITIAL TRUE.
 
 DEFINE VARIABLE parser AS HANDLE NO-UNDO.
-RUN prolint/proparse-shim/api/proparse.p PERSISTENT SET parser.
-{prolint/proparse-shim/api/proparse.i parser}
+RUN proparse/api/proparse.p PERSISTENT SET parser.
+{proparse/api/proparse.i parser}
 
 ASSIGN outfile = SESSION:TEMP-DIRECTORY + "/joanju_tokenlister.txt":U.
 
@@ -95,7 +95,7 @@ PROCEDURE main:
   DO ON ERROR UNDO, LEAVE:
     FILE-INFO:FILE-NAME = filename.
     IF parserParse(FILE-INFO:FULL-PATHNAME) = FALSE THEN DO:
-      /*MESSAGE parserErrorGetText() VIEW-AS ALERT-BOX ERROR TITLE "parserParse".*/
+      MESSAGE parserErrorGetText() VIEW-AS ALERT-BOX ERROR TITLE "parserParse".
       LEAVE errorblock.
     END.
     ASSIGN

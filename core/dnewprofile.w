@@ -131,7 +131,6 @@ DEFINE FRAME Dialog-Frame
 /* Settings for THIS-PROCEDURE
    Type: Dialog-Box
    Allow: Basic,Browse,DB-Fields,Query
-   Other Settings: COMPILE
  */
 &ANALYZE-RESUME _END-PROCEDURE-SETTINGS
 
@@ -241,7 +240,7 @@ PROCEDURE CreateNewProfile :
   basedir = FILE-INFO:FULL-PATHNAME.
 
   /* try to create the new subdirectory: */
-  OS-CREATE-DIR VALUE(basedir + "/":U + ed_newname) NO-ERROR.
+  OS-CREATE-DIR VALUE(basedir + "/":U + ed_newname).
   IF NOT ERROR-STATUS:ERROR THEN
      done = TRUE.
   ELSE 

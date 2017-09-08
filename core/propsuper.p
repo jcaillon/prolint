@@ -35,7 +35,7 @@
    DEFINE VARIABLE cInstance AS INTEGER NO-UNDO INITIAL 0.
 
    /* fetch default properties  */
-   RUN prolint/prolint.properties.p.
+   RUN prolint/settings/prolint.properties.p.
 
    /* fetch custom properties, if they exist */
    IF SEARCH("prolint/custom/prolint.properties.p")<>? THEN

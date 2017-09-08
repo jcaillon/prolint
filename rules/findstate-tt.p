@@ -95,8 +95,13 @@ def var sSibChildType%  as char                         no-undo.
         iSiblingChild% = parserGetHandle()
         sNodeType%     = parserGetNodeType(ipiTheNode%)
         sChildType%    = parserNodeFirstChild(ipiTheNode%,iChild%)
-        sSiblingType%  = parserNodeNextSibling(ipiTheNode%,iSibling%)
-        sSibChildType% = parserNodeFirstChild(iSibling%,iSiblingChild%).
+        sSiblingType%  = parserNodeNextSibling(ipiTheNode%,iSibling%).
+        
+    /* Sometimes, proparse-shim raises exception */
+    assign
+        sSibChildType% = parserNodeFirstChild(iSibling%,iSiblingChild%) no-error.
+    if error-status:error then
+        return.
 
     if sChildType% = "" then
     do:

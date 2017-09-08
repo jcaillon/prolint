@@ -44,13 +44,13 @@ DEFINE TEMP-TABLE tt_sourcefiles NO-UNDO
 
 /* Parameters Definitions ---                                           */
 &IF DEFINED(UIB_is_running)=0 &THEN
-  DEFINE OUTPUT PARAMETER ModalResult AS INTEGER NO-UNDO INITIAL 0. 
-  DEFINE OUTPUT PARAMETER pProfile    AS CHARACTER NO-UNDO INITIAL 0. 
+  DEFINE OUTPUT PARAMETER ModalResult AS INTEGER NO-UNDO INITIAL 0.
+  DEFINE OUTPUT PARAMETER pProfile    AS CHARACTER NO-UNDO INITIAL 0.
   DEFINE OUTPUT PARAMETER TABLE FOR tt_sourcefiles.
   DEFINE OUTPUT PARAMETER pClearOutput AS LOGICAL NO-UNDO INITIAL TRUE.
 &ELSE
   DEFINE VARIABLE ModalResult  AS INTEGER   NO-UNDO INITIAL 0.
-  DEFINE VARIABLE pProfile     AS CHARACTER NO-UNDO INITIAL 0. 
+  DEFINE VARIABLE pProfile     AS CHARACTER NO-UNDO INITIAL 0.
   DEFINE VARIABLE pClearOutput AS LOGICAL   NO-UNDO INITIAL TRUE.
 &ENDIF
 
@@ -76,8 +76,9 @@ DEFINE VARIABLE SessionName  AS CHARACTER NO-UNDO LABEL "Session Name" FORMAT "X
 &Scoped-define FRAME-NAME Dialog-Frame
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS cb_profile tg_ClearOutput btn_new btn_find btn_session0 ~
-ed_sourcefile Btn_rtbtask Btn_OK Btn_Cancel Btn_Help 
+&Scoped-Define ENABLED-OBJECTS btn_new btn_find btn_session0 cb_profile ~
+tg_ClearOutput BT_BROWSE ed_sourcefile Btn_rtbtask Btn_OK Btn_Cancel ~
+Btn_Help RT_SEPARATOR 
 &Scoped-Define DISPLAYED-OBJECTS cb_profile tg_ClearOutput ed_sourcefile ~
 fi_SessionID 
 
@@ -108,23 +109,34 @@ DEFINE VAR CURRENT-WINDOW-layout AS CHAR INITIAL "Master Layout":U NO-UNDO.
 /* Definitions of the field level widgets                               */
 DEFINE BUTTON Btn_Cancel 
      LABEL "Cancel":T 
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
-     &ELSE SIZE 15 BY 1 &ENDIF
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 14 BY 1
+     &ELSE SIZE 14 BY 1 &ENDIF
      BGCOLOR 8 .
 
 DEFINE BUTTON btn_find 
      LABEL "Find" 
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
-     &ELSE SIZE 15 BY 1 &ENDIF.
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 14 BY 1
+     &ELSE SIZE 14.2 BY 1 &ENDIF.
 
 DEFINE BUTTON Btn_Help 
      LABEL "&Help":T 
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
-     &ELSE SIZE 15 BY 1 &ENDIF
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 14 BY 1
+     &ELSE SIZE 14 BY 1 &ENDIF
      BGCOLOR 8 .
 
 DEFINE BUTTON btn_new 
      LABEL "New" 
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 14 BY 1
+     &ELSE SIZE 14.2 BY 1 &ENDIF.
+
+DEFINE BUTTON Btn_OK 
+     LABEL "OK":T 
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 14 BY 1
+     &ELSE SIZE 14 BY 1 &ENDIF
+     BGCOLOR 8 .
+
+DEFINE BUTTON Btn_rtbtask 
+     LABEL "RTB task":U 
      &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
      &ELSE SIZE 15 BY 1 &ENDIF.
 
@@ -133,28 +145,22 @@ DEFINE BUTTON btn_session0
      &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
      &ELSE SIZE 15 BY 1 &ENDIF.
 
-DEFINE BUTTON Btn_OK 
-     LABEL "OK":T 
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
-     &ELSE SIZE 15 BY 1 &ENDIF
-     BGCOLOR 8 .
-
-DEFINE BUTTON Btn_rtbtask 
-     LABEL "RTB task":U 
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
-     &ELSE SIZE 15 BY 1 &ENDIF.
+DEFINE BUTTON BT_BROWSE 
+     LABEL "..." 
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 6 BY 1
+     &ELSE SIZE 6 BY 1 &ENDIF.
 
 DEFINE VARIABLE cb_profile AS CHARACTER FORMAT "X(256)":U 
      LABEL "Use profile":T 
      VIEW-AS COMBO-BOX SORT INNER-LINES 15
      DROP-DOWN-LIST
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 32 BY 1
-     &ELSE SIZE 42 BY 1 &ENDIF NO-UNDO.
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 77 BY 1
+     &ELSE SIZE 77 BY 1 &ENDIF NO-UNDO.
 
 DEFINE VARIABLE ed_sourcefile AS CHARACTER 
      VIEW-AS EDITOR NO-WORD-WRAP SCROLLBAR-HORIZONTAL SCROLLBAR-VERTICAL
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 84 BY 10
-     &ELSE SIZE 84 BY 10.48 &ENDIF NO-UNDO.
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 88 BY 10
+     &ELSE SIZE 88 BY 10.48 &ENDIF NO-UNDO.
 
 DEFINE VARIABLE fi_SessionID AS INTEGER FORMAT ">>>>>>>>9":U INITIAL 0 
      LABEL "Session ID" 
@@ -162,55 +168,66 @@ DEFINE VARIABLE fi_SessionID AS INTEGER FORMAT ">>>>>>>>9":U INITIAL 0
      &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 15 BY 1
      &ELSE SIZE 15 BY .62 &ENDIF NO-UNDO.
 
+DEFINE RECTANGLE RT_SEPARATOR
+     EDGE-PIXELS 2 GRAPHIC-EDGE  NO-FILL 
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 88 BY 1
+     &ELSE SIZE 88 BY .1 &ENDIF.
+
 DEFINE VARIABLE tg_ClearOutput AS LOGICAL INITIAL yes 
-     LABEL "Clear Outputhandlers":T 
+     LABEL "Clear output handlers before new analyze":T 
      VIEW-AS TOGGLE-BOX
-     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 23 BY 1
-     &ELSE SIZE 25 BY .81 &ENDIF NO-UNDO.
+     &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 71 BY 1
+     &ELSE SIZE 71 BY .81 &ENDIF NO-UNDO.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME Dialog-Frame
-     cb_profile
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 1 COL 13 COLON-ALIGNED
-          &ELSE AT ROW 1.48 COL 11 COLON-ALIGNED &ENDIF
-     tg_ClearOutput
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 1 COL 49
-          &ELSE AT ROW 1.62 COL 57.4 &ENDIF
      btn_new
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 3 COL 28
-          &ELSE AT ROW 2.62 COL 28.8 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 1 COL 47
+          &ELSE AT ROW 1.48 COL 47 &ENDIF
      btn_find
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 3 COL 43
-          &ELSE AT ROW 2.62 COL 43.8 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 1 COL 62
+          &ELSE AT ROW 1.48 COL 62 &ENDIF
      btn_session0
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 3 COL 58
-          &ELSE AT ROW 2.62 COL 58.8 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 1 COL 77
+          &ELSE AT ROW 1.48 COL 77 &ENDIF
+     cb_profile
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 3 COL 13 COLON-ALIGNED
+          &ELSE AT ROW 2.91 COL 13 COLON-ALIGNED &ENDIF
+     tg_ClearOutput
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 5 COL 15
+          &ELSE AT ROW 4.57 COL 15 &ENDIF
+     BT_BROWSE
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 6 COL 86
+          &ELSE AT ROW 6.24 COL 86 &ENDIF
      ed_sourcefile
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 4 COL 2
-          &ELSE AT ROW 4.33 COL 2 &ENDIF NO-LABEL
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 8 COL 4
+          &ELSE AT ROW 7.91 COL 4 &ENDIF NO-LABEL
      Btn_rtbtask
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 15 COL 2
-          &ELSE AT ROW 15 COL 2 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 19 COL 4
+          &ELSE AT ROW 18.86 COL 4 &ENDIF
      Btn_OK
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 15 COL 41
-          &ELSE AT ROW 15 COL 41 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 19 COL 48
+          &ELSE AT ROW 18.86 COL 48 &ENDIF
      Btn_Cancel
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 15 COL 56
-          &ELSE AT ROW 15 COL 56 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 19 COL 63
+          &ELSE AT ROW 18.86 COL 63 &ENDIF
      Btn_Help
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 15 COL 71
-          &ELSE AT ROW 15 COL 71 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 19 COL 78
+          &ELSE AT ROW 18.86 COL 78 &ENDIF
      fi_SessionID
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 3 COL 11 COLON-ALIGNED
-          &ELSE AT ROW 2.67 COL 11 COLON-ALIGNED &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 2 COL 13 COLON-ALIGNED
+          &ELSE AT ROW 1.71 COL 13 COLON-ALIGNED &ENDIF
+     RT_SEPARATOR
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 6 COL 4
+          &ELSE AT ROW 5.76 COL 4 &ENDIF
      "Specify one or more sourcefiles or directories to lint:":T VIEW-AS TEXT
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 65 BY 1
-          &ELSE SIZE 65 BY .62 &ENDIF
-          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 4 COL 2
-          &ELSE AT ROW 3.71 COL 2 &ENDIF
-     SPACE(20.19) SKIP(11.67)
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN SIZE 50 BY 1
+          &ELSE SIZE 50 BY .62 &ENDIF
+          &IF '{&WINDOW-SYSTEM}' = 'TTY':U &THEN AT ROW 6 COL 4
+          &ELSE AT ROW 6.48 COL 4 &ENDIF
+     SPACE(40.79) SKIP(13.41)
     WITH VIEW-AS DIALOG-BOX KEEP-TAB-ORDER 
          SIDE-LABELS NO-UNDERLINE THREE-D  SCROLLABLE 
          TITLE "Prolint- select files to lint":T
@@ -315,9 +332,9 @@ DO:
             VIEW-AS ALERT-BOX.
     RETURN NO-APPLY.
   END.
-  
+
   /* go get the new value */
-  ASSIGN fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty", 
+  ASSIGN fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty",
                                                    "SessionID")).
   IF fi_SessionID = 0
   OR fi_SessionID = ? THEN DO:
@@ -326,7 +343,7 @@ DO:
     DISABLE btn_OK WITH FRAME {&FRAME-NAME}.
     RETURN NO-APPLY.
   END.
-  
+
   /* show it to the user and allow them to proceed */
   DISPLAY fi_SessionID WITH FRAME {&FRAME-NAME}.
   ENABLE btn_OK WITH FRAME {&FRAME-NAME}.
@@ -354,7 +371,7 @@ ON CHOOSE OF btn_new IN FRAME Dialog-Frame /* New */
 DO:
   /* No need to check availability of database or existence of sequence, the
      button would not be sensitive if they were not available. */
-     
+
   /* Go get a new sequence number and publish it to propsuper.p */
   RUN prolint/prolintdb/newsessionid.p NO-ERROR.
   IF ERROR-STATUS:ERROR THEN DO:
@@ -363,9 +380,9 @@ DO:
             VIEW-AS ALERT-BOX.
     RETURN NO-APPLY.
   END.
-  
+
   /* go get the new value */
-  ASSIGN fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty", 
+  ASSIGN fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty",
                                                    "SessionID")).
   IF fi_SessionID <= INTEGER(fi_SessionID:SCREEN-VALUE)
   OR fi_SessionID = ? THEN DO:
@@ -373,32 +390,12 @@ DO:
             VIEW-AS ALERT-BOX.
     RETURN NO-APPLY.
   END.
-  
+
   UPDATE SessionName WITH FRAME TempFrame VIEW-AS DIALOG-BOX THREE-D SIDE-LABELS.
   RUN SetProlintProperty ("SessionName", IF SessionName <> ? THEN SessionName
                                                              ELSE "").
-  
-  
-  /* show it to the user and allow them to proceed */
-  DISPLAY fi_SessionID WITH FRAME {&FRAME-NAME}.
-  ENABLE btn_OK WITH FRAME {&FRAME-NAME}.
-END.
-
-/* _UIB-CODE-BLOCK-END */
-&ANALYZE-RESUME
 
 
-&Scoped-define SELF-NAME btn_session0
-&ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL btn_session0 Dialog-Frame
-ON CHOOSE OF btn_session0 IN FRAME Dialog-Frame /* New */
-DO:
-  /* No need to check availability of database or existence of sequence, the
-     button would not be sensitive if they were not available. */
-     
-  RUN SetProlintProperty ("SessionName", ""). 
-  RUN SetProlintProperty ("SessionId", ""). 
-  ASSIGN fi_SessionID =  0.
-  
   /* show it to the user and allow them to proceed */
   DISPLAY fi_SessionID WITH FRAME {&FRAME-NAME}.
   ENABLE btn_OK WITH FRAME {&FRAME-NAME}.
@@ -412,39 +409,45 @@ END.
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL Btn_OK Dialog-Frame
 ON CHOOSE OF Btn_OK IN FRAME Dialog-Frame /* OK */
 DO:
-  DEFINE VARIABLE i AS INTEGER NO-UNDO.
-  DEFINE VARIABLE chLine AS CHARACTER NO-UNDO.
-  ModalResult = 1.
-  
-  /* copy contents of ed_sourcefiles to temp-table tt_sourcefiles */
-  ASSIGN ed_sourcefile.
-  
-  DO i=1 TO NUM-ENTRIES(ed_sourcefile,"~n":U) :  
-     chLine = TRIM(ENTRY(i,ed_sourcefile,"~n":U)).
-     IF chLine <> "" THEN
-        IF NOT CAN-FIND(tt_sourcefiles WHERE tt_sourcefiles.sourcefile=chLine) THEN DO:
-           CREATE tt_sourcefiles.
-           ASSIGN tt_sourcefiles.sourcefile = chLine.
-        END.
-  END.
-  
-  /* if session aware and the destination session is 0, be sure the user is aware */
-  IF SessionAware and fi_sessionID = 0 THEN DO:
-     Message "Results will be recorded on the base '0' session, is this OK?"
-             VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO UPDATE lZero AS LOGICAL.
-     IF NOT lZero THEN RETURN NO-APPLY.
-  END.
+    DEFINE VARIABLE i       AS INTEGER      NO-UNDO.
+    DEFINE VARIABLE chLine  AS CHARACTER    NO-UNDO.
+    ModalResult = 1.
+    
+    /* copy contents of ed_sourcefiles to temp-table tt_sourcefiles */
+    EMPTY TEMP-TABLE tt_sourcefiles.
+    ASSIGN ed_sourcefile.
+    DO i = 1 TO NUM-ENTRIES(ed_sourcefile,"~n":U) :
+        chLine = TRIM(ENTRY(i,ed_sourcefile,"~n":U)).
+        IF chLine <> "" THEN
+            IF NOT CAN-FIND(tt_sourcefiles WHERE tt_sourcefiles.sourcefile=chLine) THEN DO:
+                CREATE tt_sourcefiles.
+                ASSIGN tt_sourcefiles.sourcefile = chLine.
+            END.
+    END.
 
-  /* save pProfile in registry as most recently used profile */
-  IF OPSYS = "WIN32":U THEN DO:
-     LOAD "SOFTWARE":U BASE-KEY "HKEY_CURRENT_USER":U.
-     USE "SOFTWARE":U.
-     PUT-KEY-VALUE SECTION "Prolint\Selectfiles":U
-                   KEY "mruprofile":U
-                   VALUE pProfile NO-ERROR.
-     UNLOAD "SOFTWARE":U.
-  END.
-  APPLY "go":U TO FRAME {&FRAME-NAME}.
+    IF CAN-FIND(FIRST tt_sourcefiles NO-LOCK) THEN DO:
+        /* if session aware and the destination session is 0, be sure the user is aware */
+        IF SessionAware AND fi_sessionID = 0 THEN DO:
+            MESSAGE "Results will be recorded on the base '0' session, is this OK?" VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO UPDATE lZero AS LOGICAL.
+            IF NOT lZero THEN RETURN NO-APPLY.
+        END.
+
+        /* save pProfile in registry as most recently used profile */
+        IF OPSYS = "WIN32":U THEN DO:
+        LOAD "SOFTWARE":U BASE-KEY "HKEY_CURRENT_USER":U.
+            USE "SOFTWARE":U.
+            PUT-KEY-VALUE SECTION "Prolint\Selectfiles":U
+            KEY "mruprofile":U
+            VALUE pProfile NO-ERROR.
+        UNLOAD "SOFTWARE":U.
+        END.
+
+        APPLY "go":U TO FRAME {&FRAME-NAME}.
+    END.
+    ELSE
+        MESSAGE "Sorry, you need to provide file names to continue." VIEW-AS ALERT-BOX WARNING.
+
+    RETURN "".
 END.
 
 /* _UIB-CODE-BLOCK-END */
@@ -474,6 +477,67 @@ END.
 &ANALYZE-RESUME
 
 
+&Scoped-define SELF-NAME btn_session0
+&ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL btn_session0 Dialog-Frame
+ON CHOOSE OF btn_session0 IN FRAME Dialog-Frame /* No session */
+DO:
+  /* No need to check availability of database or existence of sequence, the
+     button would not be sensitive if they were not available. */
+
+  RUN SetProlintProperty ("SessionName", "").
+  RUN SetProlintProperty ("SessionId", "").
+  ASSIGN fi_SessionID =  0.
+
+  /* show it to the user and allow them to proceed */
+  DISPLAY fi_SessionID WITH FRAME {&FRAME-NAME}.
+  ENABLE btn_OK WITH FRAME {&FRAME-NAME}.
+END.
+
+/* _UIB-CODE-BLOCK-END */
+&ANALYZE-RESUME
+
+
+&Scoped-define SELF-NAME BT_BROWSE
+&ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL BT_BROWSE Dialog-Frame
+ON CHOOSE OF BT_BROWSE IN FRAME Dialog-Frame /* ... */
+DO:
+    DEFINE VARIABLE lOK         AS LOGICAL      NO-UNDO.
+    DEFINE VARIABLE cFileName   AS CHARACTER    NO-UNDO.
+    DEFINE VARIABLE cTmp        AS CHARACTER    NO-UNDO.
+
+
+    /* Let the user select files */
+    SYSTEM-DIALOG GET-FILE cFileName
+        TITLE      "Choose sources to analyze..."
+        FILTERS    "Source Files (*.p,*.w,*.t)"   "*.p,*.w,*.t",
+                   "All Files (*.r)"   "*.*"
+        MUST-EXIST
+        RETURN-TO-START-DIR
+        USE-FILENAME
+        UPDATE lOK.
+
+    /* Append the file if needed */
+    IF lOK THEN DO:
+        /* Ensure the file is not already in the list */
+        ASSIGN  cTmp = ed_sourcefile:SCREEN-VALUE
+                cTmp = REPLACE(cTmp, "~r~n", "|")
+                cTmp = REPLACE(cTmp, "~r", "|")
+                cTmp = REPLACE(cTmp, "~n", "|")
+                cTmp = REPLACE(cTmp, "||", "|")
+                cTmp = TRIM(cTmp, "|").
+        IF LOOKUP(cFileName, cTmp, "|") > 0 THEN
+            MESSAGE "File is already in the list." VIEW-AS ALERT-BOX WARNING.
+        ELSE
+            ASSIGN ed_sourcefile:SCREEN-VALUE = LC(REPLACE(TRIM(cTmp + "|" + cFileName, "|"), "|", "~r~n")).
+    END.
+
+    RETURN "".
+END.
+
+/* _UIB-CODE-BLOCK-END */
+&ANALYZE-RESUME
+
+
 &Scoped-define SELF-NAME cb_profile
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL cb_profile Dialog-Frame
 ON VALUE-CHANGED OF cb_profile IN FRAME Dialog-Frame /* Use profile */
@@ -491,7 +555,7 @@ END.
 
 &Scoped-define SELF-NAME tg_ClearOutput
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL tg_ClearOutput Dialog-Frame
-ON VALUE-CHANGED OF tg_ClearOutput IN FRAME Dialog-Frame /* Clear Outputhandlers */
+ON VALUE-CHANGED OF tg_ClearOutput IN FRAME Dialog-Frame /* Clear output handlers before new analyze */
 DO:
   ASSIGN tg_ClearOutput.
   pClearOutput = tg_ClearOutput.
@@ -511,13 +575,13 @@ END.
 ON DROP-FILE-NOTIFY OF FRAME {&FRAME-NAME} /* Prolint- select files to lint */
 DO:
    DEFINE VARIABLE i AS INTEGER NO-UNDO.
-   DEFINE VARIABLE numfiles AS INTEGER NO-UNDO. 
+   DEFINE VARIABLE numfiles AS INTEGER NO-UNDO.
 
    numfiles = FRAME {&FRAME-NAME}:NUM-DROPPED-FILES.
    DO i=1 TO numfiles:
       RUN AddFile (FRAME {&FRAME-NAME}:GET-DROPPED-FILE(i)).
    END.
-   FRAME {&FRAME-NAME}:END-FILE-DROP().  
+   FRAME {&FRAME-NAME}:END-FILE-DROP().
 END.
 
 
@@ -532,31 +596,28 @@ MAIN-BLOCK:
 DO ON ERROR   UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK
    ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
 
-
-  PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
-  IF NOT propsrunning THEN
-     RUN prolint/core/propsuper.p PERSISTENT.
-  RUN IncrementProlintPropertySubscribers.
-  
-  /* check to see if the database is connected, and has the session table */
-  /* to determine if we should show the session widgets.                  */
-  ASSIGN filemasks    = DYNAMIC-FUNCTION ("ProlintProperty", 
-                                          "compilationunit.filename.mask")
-         fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty", 
-                                                    "SessionID")).
-  RUN GetProfiles.
-  RUN enable_UI.
-  RUN SessionAwareUI IN THIS-PROCEDURE.
-
-  /* enable drag/drop if the version allows it */
-  IF SessionWindowSystem="GUI":U THEN
+    PUBLISH "IsProlintPropertiesRunning":U (OUTPUT propsrunning).
+    IF NOT propsrunning THEN
+        RUN prolint/core/propsuper.p PERSISTENT.
+    RUN IncrementProlintPropertySubscribers.
+    
+    /* check to see if the database is connected, and has the session table */
+    /* to determine if we should show the session widgets.                  */
+    ASSIGN  filemasks    = DYNAMIC-FUNCTION ("ProlintProperty", "compilationunit.filename.mask")
+            fi_SessionID =  INTEGER(DYNAMIC-FUNCTION ("ProlintProperty", "SessionID")).
+    RUN GetProfiles.
+    RUN enable_UI.
+    RUN SessionAwareUI IN THIS-PROCEDURE.
+    
+    /* enable drag/drop if the version allows it */
+    IF SessionWindowSystem="GUI":U THEN
      FRAME {&FRAME-NAME}:DROP-TARGET = YES.
-
-  Btn_rtbtask:VISIBLE IN FRAME {&FRAME-NAME} = CONNECTED("rtb":U).
-  APPLY "entry":U TO ed_sourcefile IN FRAME {&FRAME-NAME}.
-
-  WAIT-FOR GO OF FRAME {&FRAME-NAME}.
-  RUN Destructor.
+    
+    Btn_rtbtask:VISIBLE IN FRAME {&FRAME-NAME} = CONNECTED("rtb":U).
+    APPLY "entry":U TO ed_sourcefile IN FRAME {&FRAME-NAME}.
+    
+    WAIT-FOR GO OF FRAME {&FRAME-NAME}.
+    RUN Destructor.
 END.
 
 RUN disable_UI.
@@ -584,7 +645,7 @@ PROCEDURE AddFile :
   END.
 
   newfile = RelativeFileName(newfile).
-     
+
   DO WITH FRAME {&FRAME-NAME} :
      ed_sourcefile:MOVE-TO-TOP().
      ed_sourcefile:INSERT-STRING(newfile + "~n":U).
@@ -598,9 +659,9 @@ END PROCEDURE.
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE checkOutputHandlers Dialog-Frame 
 PROCEDURE checkOutputHandlers :
 /*------------------------------------------------------------------------------
-  Purpose:     
+  Purpose:
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
 DEFINE VARIABLE CurrProf AS CHARACTER NO-UNDO.
 
@@ -620,7 +681,7 @@ PROCEDURE Destructor :
 /*------------------------------------------------------------------------------
   Purpose:     on close of the window, free all resources
 ------------------------------------------------------------------------------*/
-  IF ModalResult=0 THEN 
+  IF ModalResult=0 THEN
      FOR EACH tt_sourcefiles :
          DELETE tt_sourcefiles.
      END.
@@ -661,8 +722,8 @@ PROCEDURE enable_UI :
 ------------------------------------------------------------------------------*/
   DISPLAY cb_profile tg_ClearOutput ed_sourcefile fi_SessionID 
       WITH FRAME Dialog-Frame.
-  ENABLE cb_profile tg_ClearOutput btn_new btn_find btn_session0 ed_sourcefile Btn_rtbtask 
-         Btn_OK Btn_Cancel Btn_Help 
+  ENABLE btn_new btn_find btn_session0 cb_profile tg_ClearOutput BT_BROWSE 
+         ed_sourcefile Btn_rtbtask Btn_OK Btn_Cancel Btn_Help RT_SEPARATOR 
       WITH FRAME Dialog-Frame.
   VIEW FRAME Dialog-Frame.
   {&OPEN-BROWSERS-IN-QUERY-Dialog-Frame}
@@ -674,42 +735,42 @@ END PROCEDURE.
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE GetOutputHandlers Dialog-Frame 
 PROCEDURE GetOutputHandlers :
 /*------------------------------------------------------------------------------
-  Purpose:     
+  Purpose:
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
   DEFINE INPUT PARAMETER pProfile   AS  CHARACTER NO-UNDO.
-  
+
   DEFINE VARIABLE        lDirectory AS  CHARACTER NO-UNDO.
   DEFINE VARIABLE        handler    AS  CHARACTER NO-UNDO.
   DEFINE VARIABLE        DBHandler  AS  LOGICAL   NO-UNDO.
   DEFINE VARIABLE        hSessionTbl AS HANDLE    NO-UNDO.
-  
+
   IF pProfile = ? OR pProfile = "" THEN RETURN ERROR "No Profile".
-  
+
   RUN GetProfileDirectory IN THIS-PROCEDURE (pProfile, OUTPUT lDirectory) NO-ERROR.
   IF ERROR-STATUS:ERROR THEN RETURN ERROR RETURN-VALUE.
 
   FILE-INFO:FILE-NAME = lDirectory + "/handlers.d":U.
   IF FILE-INFO:FULL-PATHNAME <> ? THEN DO:
      INPUT FROM VALUE(FILE-INFO:FULL-PATHNAME).
-     IMPORTLOOP: REPEAT:        
-       IMPORT handler.                               
+     IMPORTLOOP: REPEAT:
+       IMPORT handler.
        IF handler BEGINS 'prolintdb' then DO:
           ASSIGN DBHandler = true.
           leave IMPORTLOOP.
        END.
      END. /* IMPORTLOOP */
-     INPUT CLOSE.                                     
-  END.                          
+     INPUT CLOSE.
+  END.
 
   IF DBHandler THEN DO:
      CREATE BUFFER hSessionTbl FOR TABLE "lint_session" NO-ERROR.
      ASSIGN SessionAware = (CONNECTED("prolintdb") and VALID-HANDLE(hSessionTbl)).
      DELETE OBJECT hSessionTbl no-error.
-  END.  
+  END.
   ELSE ASSIGN SessionAware = FALSE.
-  
+
 END PROCEDURE.
 
 /* _UIB-CODE-BLOCK-END */
@@ -723,7 +784,7 @@ PROCEDURE GetProfileDirectory :
                or "prolint/settings/ + pCustomProfile
                or just "prolint/settings"
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
 DEFINE INPUT  PARAMETER pCustomProfile    AS CHARACTER NO-UNDO.
 DEFINE OUTPUT PARAMETER ProfileDirectory  AS CHARACTER NO-UNDO.
@@ -779,7 +840,7 @@ PROCEDURE GetProfiles :
   DEFINE VARIABLE attribs  AS CHAR NO-UNDO.
   DEFINE VARIABLE mruprofile AS CHAR NO-UNDO.
   DEFINE VARIABLE dirlist  AS CHAR NO-UNDO INITIAL "<none>":U.
-                                
+
   FILE-INFO:FILE-NAME = "prolint/settings":U.
   INPUT FROM OS-DIR (FILE-INFO:FULL-PATHNAME).
   REPEAT:
@@ -828,6 +889,8 @@ PROCEDURE GetProfiles :
      cb_profile:LIST-ITEMS = dirlist.
      IF LOOKUP(mruprofile,dirlist)>0 THEN
         cb_profile:SCREEN-VALUE = mruprofile.
+     ELSE
+         cb_profile:SCREEN-VALUE = "<none>".
      APPLY "value-changed":U TO cb_profile.
   END.
 
@@ -839,9 +902,9 @@ END PROCEDURE.
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE SessionAwareUI Dialog-Frame 
 PROCEDURE SessionAwareUI :
 /*------------------------------------------------------------------------------
-  Purpose:     
+  Purpose:
   Parameters:  <none>
-  Notes:       
+  Notes:
 ------------------------------------------------------------------------------*/
   DO WITH FRAME {&FRAME-NAME}:
     ASSIGN btn_find:VISIBLE     = SessionAware
@@ -878,64 +941,96 @@ PROCEDURE CURRENT-WINDOW-layouts:
       ASSIGN
          &IF '{&WINDOW-SYSTEM}' NE 'TTY':U &THEN
          FRAME Dialog-Frame:HIDDEN                         = yes &ENDIF
-         FRAME Dialog-Frame:WIDTH                          = 86.2
+         FRAME Dialog-Frame:HEIGHT                         = 19.52
+               + FRAME Dialog-Frame:BORDER-TOP + FRAME Dialog-Frame:BORDER-BOTTOM
+         FRAME Dialog-Frame:WIDTH                          = 93.8
                + FRAME Dialog-Frame:BORDER-LEFT + FRAME Dialog-Frame:BORDER-RIGHT.
 
       ASSIGN
+         Btn_Cancel:HIDDEN IN FRAME Dialog-Frame           = yes
+         Btn_Cancel:ROW IN FRAME Dialog-Frame              = 18.86
+         Btn_Cancel:HIDDEN IN FRAME Dialog-Frame           = no.
+
+      ASSIGN
          btn_find:HIDDEN IN FRAME Dialog-Frame             = yes
-         btn_find:COL IN FRAME Dialog-Frame                = 43.8
-         btn_find:ROW IN FRAME Dialog-Frame                = 2.62
+         btn_find:ROW IN FRAME Dialog-Frame                = 1.48
+         btn_find:WIDTH IN FRAME Dialog-Frame              = 14.2
          btn_find:HIDDEN IN FRAME Dialog-Frame             = no.
 
       ASSIGN
+         Btn_Help:HIDDEN IN FRAME Dialog-Frame             = yes
+         Btn_Help:ROW IN FRAME Dialog-Frame                = 18.86
+         Btn_Help:HIDDEN IN FRAME Dialog-Frame             = no.
+
+      ASSIGN
          btn_new:HIDDEN IN FRAME Dialog-Frame              = yes
-         btn_new:COL IN FRAME Dialog-Frame                 = 28.8
-         btn_new:ROW IN FRAME Dialog-Frame                 = 2.62
+         btn_new:ROW IN FRAME Dialog-Frame                 = 1.48
+         btn_new:WIDTH IN FRAME Dialog-Frame               = 14.2
          btn_new:HIDDEN IN FRAME Dialog-Frame              = no.
 
       ASSIGN
-         btn_session0:HIDDEN IN FRAME Dialog-Frame              = yes
-         btn_session0:COL IN FRAME Dialog-Frame                 = 58.8
-         btn_session0:ROW IN FRAME Dialog-Frame                 = 2.62
-         btn_session0:HIDDEN IN FRAME Dialog-Frame              = no.
+         Btn_OK:HIDDEN IN FRAME Dialog-Frame               = yes
+         Btn_OK:ROW IN FRAME Dialog-Frame                  = 18.86
+         Btn_OK:HIDDEN IN FRAME Dialog-Frame               = no.
+
+      ASSIGN
+         Btn_rtbtask:HIDDEN IN FRAME Dialog-Frame          = yes
+         Btn_rtbtask:ROW IN FRAME Dialog-Frame             = 18.86
+         Btn_rtbtask:HIDDEN IN FRAME Dialog-Frame          = no.
+
+      ASSIGN
+         btn_session0:HIDDEN IN FRAME Dialog-Frame         = yes
+         btn_session0:ROW IN FRAME Dialog-Frame            = 1.48
+         btn_session0:HIDDEN IN FRAME Dialog-Frame         = no.
+
+      ASSIGN
+         BT_BROWSE:HIDDEN IN FRAME Dialog-Frame            = yes
+         BT_BROWSE:ROW IN FRAME Dialog-Frame               = 6.24
+         BT_BROWSE:HIDDEN IN FRAME Dialog-Frame            = no.
 
       ASSIGN
          cb_profile:HIDDEN IN FRAME Dialog-Frame           = yes
-         widg-pos = cb_profile:COL IN FRAME Dialog-Frame 
-         cb_profile:COL IN FRAME Dialog-Frame              = 13
-         lbl-hndl = cb_profile:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
-         lbl-hndl:COL = lbl-hndl:COL + cb_profile:COL IN FRAME Dialog-Frame  - widg-pos
          widg-pos = cb_profile:ROW IN FRAME Dialog-Frame 
-         cb_profile:ROW IN FRAME Dialog-Frame              = 1.48
+         cb_profile:ROW IN FRAME Dialog-Frame              = 2.91
          lbl-hndl = cb_profile:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
          lbl-hndl:ROW = lbl-hndl:ROW + cb_profile:ROW IN FRAME Dialog-Frame  - widg-pos
-         cb_profile:WIDTH IN FRAME Dialog-Frame            = 42
          cb_profile:HIDDEN IN FRAME Dialog-Frame           = no.
 
       ASSIGN
          ed_sourcefile:HIDDEN IN FRAME Dialog-Frame        = yes
          ed_sourcefile:HEIGHT IN FRAME Dialog-Frame        = 10.48
-         ed_sourcefile:ROW IN FRAME Dialog-Frame           = 4.33
+         ed_sourcefile:ROW IN FRAME Dialog-Frame           = 7.91
          ed_sourcefile:HIDDEN IN FRAME Dialog-Frame        = no.
 
       ASSIGN
          fi_SessionID:HIDDEN IN FRAME Dialog-Frame         = yes
          fi_SessionID:HEIGHT IN FRAME Dialog-Frame         = .62
          widg-pos = fi_SessionID:ROW IN FRAME Dialog-Frame 
-         fi_SessionID:ROW IN FRAME Dialog-Frame            = 2.67
+         fi_SessionID:ROW IN FRAME Dialog-Frame            = 1.71
          lbl-hndl = fi_SessionID:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
          lbl-hndl:ROW = lbl-hndl:ROW + fi_SessionID:ROW IN FRAME Dialog-Frame  - widg-pos
          fi_SessionID:HIDDEN IN FRAME Dialog-Frame         = no.
 
       ASSIGN
+         RT_SEPARATOR:EDGE-PIXELS IN FRAME Dialog-Frame    = 2
+         RT_SEPARATOR:HIDDEN IN FRAME Dialog-Frame         = yes
+         RT_SEPARATOR:HEIGHT IN FRAME Dialog-Frame         = .1
+         RT_SEPARATOR:ROW IN FRAME Dialog-Frame            = 5.76
+         RT_SEPARATOR:HIDDEN IN FRAME Dialog-Frame         = no.
+
+      ASSIGN
          tg_ClearOutput:HIDDEN IN FRAME Dialog-Frame       = yes
-         tg_ClearOutput:COL IN FRAME Dialog-Frame          = 57.4
          tg_ClearOutput:HEIGHT IN FRAME Dialog-Frame       = .81
-         tg_ClearOutput:ROW IN FRAME Dialog-Frame          = 1.62
-         tg_ClearOutput:WIDTH IN FRAME Dialog-Frame        = 25
+         tg_ClearOutput:ROW IN FRAME Dialog-Frame          = 4.57
          tg_ClearOutput:HIDDEN IN FRAME Dialog-Frame       = no.
 
       ASSIGN
+
+         FRAME Dialog-Frame:VIRTUAL-HEIGHT                 = 19.52
+                    WHEN FRAME Dialog-Frame:SCROLLABLE
+
+         FRAME Dialog-Frame:VIRTUAL-WIDTH                  = 93.80
+                    WHEN FRAME Dialog-Frame:SCROLLABLE
          &IF '{&WINDOW-SYSTEM}' NE 'TTY':U &THEN
          FRAME Dialog-Frame:HIDDEN                         = no &ENDIF.
 
@@ -945,64 +1040,97 @@ PROCEDURE CURRENT-WINDOW-layouts:
       ASSIGN
          &IF '{&WINDOW-SYSTEM}' NE 'TTY':U &THEN
          FRAME Dialog-Frame:HIDDEN                         = yes &ENDIF
+         FRAME Dialog-Frame:HEIGHT                         = 15
+               + FRAME Dialog-Frame:BORDER-TOP + FRAME Dialog-Frame:BORDER-BOTTOM
          FRAME Dialog-Frame:WIDTH                          = 73
                + FRAME Dialog-Frame:BORDER-LEFT + FRAME Dialog-Frame:BORDER-RIGHT NO-ERROR.
 
       ASSIGN
+         Btn_Cancel:HIDDEN IN FRAME Dialog-Frame           = yes
+         Btn_Cancel:ROW IN FRAME Dialog-Frame              = 19
+         Btn_Cancel:HIDDEN IN FRAME Dialog-Frame           = no NO-ERROR.
+
+      ASSIGN
          btn_find:HIDDEN IN FRAME Dialog-Frame             = yes
-         btn_find:COL IN FRAME Dialog-Frame                = 43
-         btn_find:ROW IN FRAME Dialog-Frame                = 3
+         btn_find:ROW IN FRAME Dialog-Frame                = 1
+         btn_find:WIDTH IN FRAME Dialog-Frame              = 14
          btn_find:HIDDEN IN FRAME Dialog-Frame             = no NO-ERROR.
 
       ASSIGN
+         Btn_Help:HIDDEN IN FRAME Dialog-Frame             = yes
+         Btn_Help:ROW IN FRAME Dialog-Frame                = 19
+         Btn_Help:HIDDEN IN FRAME Dialog-Frame             = no NO-ERROR.
+
+      ASSIGN
          btn_new:HIDDEN IN FRAME Dialog-Frame              = yes
-         btn_new:COL IN FRAME Dialog-Frame                 = 28
-         btn_new:ROW IN FRAME Dialog-Frame                 = 3
+         btn_new:ROW IN FRAME Dialog-Frame                 = 1
+         btn_new:WIDTH IN FRAME Dialog-Frame               = 14
          btn_new:HIDDEN IN FRAME Dialog-Frame              = no NO-ERROR.
 
       ASSIGN
-         btn_session0:HIDDEN IN FRAME Dialog-Frame              = yes
-         btn_session0:COL IN FRAME Dialog-Frame                 = 28
-         btn_session0:ROW IN FRAME Dialog-Frame                 = 3
-         btn_session0:HIDDEN IN FRAME Dialog-Frame              = no NO-ERROR.
+         Btn_OK:HIDDEN IN FRAME Dialog-Frame               = yes
+         Btn_OK:ROW IN FRAME Dialog-Frame                  = 19
+         Btn_OK:HIDDEN IN FRAME Dialog-Frame               = no NO-ERROR.
+
+      ASSIGN
+         Btn_rtbtask:HIDDEN IN FRAME Dialog-Frame          = yes
+         Btn_rtbtask:ROW IN FRAME Dialog-Frame             = 19
+         Btn_rtbtask:HIDDEN IN FRAME Dialog-Frame          = no NO-ERROR.
+
+      ASSIGN
+         btn_session0:HIDDEN IN FRAME Dialog-Frame         = yes
+         btn_session0:ROW IN FRAME Dialog-Frame            = 1
+         btn_session0:HIDDEN IN FRAME Dialog-Frame         = no NO-ERROR.
+
+      ASSIGN
+         BT_BROWSE:HIDDEN IN FRAME Dialog-Frame            = yes
+         BT_BROWSE:ROW IN FRAME Dialog-Frame               = 6
+         BT_BROWSE:HIDDEN IN FRAME Dialog-Frame            = no NO-ERROR.
 
       ASSIGN
          cb_profile:HIDDEN IN FRAME Dialog-Frame           = yes
-         widg-pos = cb_profile:COL IN FRAME Dialog-Frame 
-         cb_profile:COL IN FRAME Dialog-Frame              = 15
-         lbl-hndl = cb_profile:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
-         lbl-hndl:COL = lbl-hndl:COL + cb_profile:COL IN FRAME Dialog-Frame  - widg-pos
          widg-pos = cb_profile:ROW IN FRAME Dialog-Frame 
-         cb_profile:ROW IN FRAME Dialog-Frame              = 1
+         cb_profile:ROW IN FRAME Dialog-Frame              = 3
          lbl-hndl = cb_profile:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
          lbl-hndl:ROW = lbl-hndl:ROW + cb_profile:ROW IN FRAME Dialog-Frame  - widg-pos
-         cb_profile:WIDTH IN FRAME Dialog-Frame            = 32
          cb_profile:HIDDEN IN FRAME Dialog-Frame           = no NO-ERROR.
 
       ASSIGN
          ed_sourcefile:HIDDEN IN FRAME Dialog-Frame        = yes
          ed_sourcefile:HEIGHT IN FRAME Dialog-Frame        = 10
-         ed_sourcefile:ROW IN FRAME Dialog-Frame           = 4
+         ed_sourcefile:ROW IN FRAME Dialog-Frame           = 8
          ed_sourcefile:HIDDEN IN FRAME Dialog-Frame        = no NO-ERROR.
 
       ASSIGN
          fi_SessionID:HIDDEN IN FRAME Dialog-Frame         = yes
          fi_SessionID:HEIGHT IN FRAME Dialog-Frame         = 1
          widg-pos = fi_SessionID:ROW IN FRAME Dialog-Frame 
-         fi_SessionID:ROW IN FRAME Dialog-Frame            = 3
+         fi_SessionID:ROW IN FRAME Dialog-Frame            = 2
          lbl-hndl = fi_SessionID:SIDE-LABEL-HANDLE IN FRAME Dialog-Frame 
          lbl-hndl:ROW = lbl-hndl:ROW + fi_SessionID:ROW IN FRAME Dialog-Frame  - widg-pos
          fi_SessionID:HIDDEN IN FRAME Dialog-Frame         = no NO-ERROR.
 
       ASSIGN
+         RT_SEPARATOR:EDGE-PIXELS IN FRAME Dialog-Frame    = 1
+         RT_SEPARATOR:GRAPHIC-EDGE IN FRAME Dialog-Frame  = no
+         RT_SEPARATOR:HIDDEN IN FRAME Dialog-Frame         = yes
+         RT_SEPARATOR:HEIGHT IN FRAME Dialog-Frame         = 1
+         RT_SEPARATOR:ROW IN FRAME Dialog-Frame            = 6
+         RT_SEPARATOR:HIDDEN IN FRAME Dialog-Frame         = no NO-ERROR.
+
+      ASSIGN
          tg_ClearOutput:HIDDEN IN FRAME Dialog-Frame       = yes
-         tg_ClearOutput:COL IN FRAME Dialog-Frame          = 49
          tg_ClearOutput:HEIGHT IN FRAME Dialog-Frame       = 1
-         tg_ClearOutput:ROW IN FRAME Dialog-Frame          = 1
-         tg_ClearOutput:WIDTH IN FRAME Dialog-Frame        = 23
+         tg_ClearOutput:ROW IN FRAME Dialog-Frame          = 5
          tg_ClearOutput:HIDDEN IN FRAME Dialog-Frame       = no NO-ERROR.
 
       ASSIGN
+
+         FRAME Dialog-Frame:VIRTUAL-HEIGHT                 = 20.00
+                    WHEN FRAME Dialog-Frame:SCROLLABLE
+
+         FRAME Dialog-Frame:VIRTUAL-WIDTH                  = 94.00
+                    WHEN FRAME Dialog-Frame:SCROLLABLE
          &IF '{&WINDOW-SYSTEM}' NE 'TTY':U &THEN
          FRAME Dialog-Frame:HIDDEN                         = no &ENDIF NO-ERROR.
 
@@ -1018,27 +1146,27 @@ END PROCEDURE.  /* CURRENT-WINDOW-layouts */
 FUNCTION RelativeFileName RETURNS CHARACTER
   ( pFileName AS CHARACTER ) :
 /*------------------------------------------------------------------------------
-  Purpose:  
-    Notes:  
+  Purpose:
+    Notes:
 ------------------------------------------------------------------------------*/
 DEFINE VARIABLE fullpath  AS CHAR NO-UNDO.
    DEFINE VARIABLE shortpath AS CHAR NO-UNDO.
    DEFINE VARIABLE i         AS INTEGER NO-UNDO.
 
    /* first replace all backslashes by forwardslashes */
-   pFileName = REPLACE(pFileName, '~\':U, '/':U).  
-     
+   pFileName = REPLACE(pFileName, '~\':U, '/':U).
+
    FILE-INFO:FILE-NAME = pFileName.
    fullpath = FILE-INFO:FULL-PATHNAME.
-                
+
    shortpath = ENTRY(NUM-ENTRIES(pFileName, '/':U), pFileName, '/':U).
    DO i=NUM-ENTRIES(pFileName, '/':U) TO 2 BY -1 :
       FILE-INFO:FILE-NAME = shortpath.
       IF FILE-INFO:FULL-PATHNAME = fullpath THEN
-         RETURN shortpath.                          
-      shortpath = ENTRY(i - 1, pFileName, '/':U) + '/':U + shortpath.   
+         RETURN shortpath.
+      shortpath = ENTRY(i - 1, pFileName, '/':U) + '/':U + shortpath.
    END.
-   
+
    RETURN pFileName.
 
 END FUNCTION.

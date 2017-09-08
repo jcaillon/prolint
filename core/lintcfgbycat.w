@@ -109,7 +109,7 @@ DEFINE QUERY brw_rules FOR
 DEFINE BROWSE brw_rules
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _DISPLAY-FIELDS brw_rules DEFAULT-FRAME _FREEFORM
   QUERY brw_rules DISPLAY
-      tt_rules.RuleID       FORMAT "x(15)":U  WIDTH-CHARS 15
+      tt_rules.RuleID       FORMAT "x(30)":U  WIDTH-CHARS 30
    tt_rules.required     FORMAT "yes/no":U
    tt_rules.customseverity     FORMAT "9":U  WIDTH-CHARS 10 LABEL "severity":T
    tt_rules.description  FORMAT "x(60)":U WIDTH-CHARS 60
@@ -117,17 +117,17 @@ DEFINE BROWSE brw_rules
 enable tt_rules.required tt_rules.customseverity
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
-    WITH NO-ROW-MARKERS SEPARATORS SIZE 107 BY 13.33 ROW-HEIGHT-CHARS .67.
+    WITH NO-ROW-MARKERS SEPARATORS SIZE 109 BY 21.43 ROW-HEIGHT-CHARS .67 EXPANDABLE.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-     brw_rules AT ROW 3.05 COL 5
-     Btn_OK AT ROW 16.81 COL 48
+     brw_rules AT ROW 2.19 COL 3
+     Btn_OK AT ROW 24.1 COL 48
      "Select which rules you want to run, set their severities:":T VIEW-AS TEXT
-          SIZE 51 BY .62 AT ROW 2.1 COL 5
-     SPACE(58.59) SKIP(15.70)
+          SIZE 51 BY .62 AT ROW 1.24 COL 3
+     SPACE(60.59) SKIP(23.75)
     WITH VIEW-AS DIALOG-BOX KEEP-TAB-ORDER 
          SIDE-LABELS NO-UNDERLINE THREE-D  SCROLLABLE 
          TITLE "Select some rules from category"
@@ -140,7 +140,6 @@ DEFINE FRAME DEFAULT-FRAME
 /* Settings for THIS-PROCEDURE
    Type: Dialog-Box
    Allow: Basic,Browse,DB-Fields,Query
-   Other Settings: COMPILE
  */
 &ANALYZE-RESUME _END-PROCEDURE-SETTINGS
 
@@ -155,6 +154,9 @@ DEFINE FRAME DEFAULT-FRAME
 ASSIGN 
        FRAME DEFAULT-FRAME:SCROLLABLE       = FALSE
        FRAME DEFAULT-FRAME:HIDDEN           = TRUE.
+
+ASSIGN 
+       brw_rules:COLUMN-RESIZABLE IN FRAME DEFAULT-FRAME       = TRUE.
 
 /* _RUN-TIME-ATTRIBUTES-END */
 &ANALYZE-RESUME

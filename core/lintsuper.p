@@ -28,10 +28,12 @@ DEFINE INPUT PARAMETER hparser AS HANDLE  NO-UNDO.
 DEFINE INPUT PARAMETER hpFilterPlugins AS HANDLE NO-UNDO.
 {prolint/proparse-shim/api/proparse.i hparser}
                                     
+
 DEFINE VARIABLE IgnoreAB         AS LOGICAL NO-UNDO INITIAL FALSE.
 DEFINE VARIABLE ActivePragma     AS INTEGER NO-UNDO.
 DEFINE VARIABLE ActiveSeverity   AS INTEGER NO-UNDO.
 DEFINE VARIABLE AbortSearch      AS LOGICAL NO-UNDO.
+DEFINE VARIABLE SearchPath 		 AS CHARACTER NO-UNDO.
 
   /* tt_procedure lists every procedure and function in a compilation unit */
   {prolint/core/ttprocedure.i}
@@ -41,7 +43,7 @@ DEFINE VARIABLE AbortSearch      AS LOGICAL NO-UNDO.
      FIELD longname     AS CHAR
      FIELD relativename AS CHAR
      INDEX idx_1 AS PRIMARY UNIQUE longname.
-  DEFINE VARIABLE SearchPath AS CHARACTER NO-UNDO.
+
 
   /* list class inheritance (recursive) */
   DEFINE TEMP-TABLE tt_superclass NO-UNDO
@@ -58,9 +60,13 @@ DEFINE VARIABLE AbortSearch      AS LOGICAL NO-UNDO.
      FIELD accessmode AS CHARACTER
      INDEX idx_1 AS PRIMARY UNIQUE classname attribname.
 
+
 ON "CLOSE":U OF THIS-PROCEDURE DO:
   DELETE PROCEDURE THIS-PROCEDURE.
 END.  
+
+
+
 
 
 /* --------------------------------------------------------------------------------
@@ -522,9 +528,9 @@ PROCEDURE PublishResultSeverity :
    DEFINE VARIABLE severity AS INTEGER NO-UNDO.
    DEFINE VARIABLE RelativeSource AS CHARACTER NO-UNDO.
 
-   ASSIGN
-      pDescription = REPLACE(REPLACE(pDescription,"~n":U," ":U),CHR(9)," ":U)
-      severity = IF pCurrentSeverity=? THEN ActiveSeverity ELSE pCurrentSeverity.
+    ASSIGN  
+    	pDescription  = REPLACE(REPLACE(pDescription,"~n":U," ":U),CHR(9)," ":U)
+		severity = IF pCurrentSeverity=? THEN ActiveSeverity ELSE pCurrentSeverity.
 
    /* replace fully-qualified path by relative path (relative to propath) */
    IF pCompilationUnit = pSource THEN
@@ -548,13 +554,27 @@ PROCEDURE PublishResultSeverity :
 
    IF filteredby <> "" THEN RETURN.  /* TODO: send filteredby to outputhandlers */
 
+    /* Force the full file name for display */
+    ASSIGN FILE-INFO:FILE-NAME = pCompilationUnit.
+    IF FILE-INFO:FILE-TYPE <> ? THEN
+        ASSIGN pCompilationUnit = FILE-INFO:FULL-PATHNAME.
+    ELSE IF SEARCH(pCompilationUnit) <> ? THEN
+        ASSIGN pCompilationUnit = SEARCH(pCompilationUnit).
+
+    ASSIGN FILE-INFO:FILE-NAME = pSource.
+    IF FILE-INFO:FILE-TYPE <> ? THEN
+        ASSIGN pSource = FILE-INFO:FULL-PATHNAME.
+    ELSE IF SEARCH(pSource) <> ? THEN
+        ASSIGN pSource = SEARCH(pSource).
+
+    /* Publish the result */
    PUBLISH "Prolint_AddResult":U (pCompilationunit,
-                                  RelativeSource,
+                                  pSource,
                                   pLineNumber,
                                   REPLACE(pDescription,"~n":U," ":U),
                                   pRuleID,
                                   severity).
-                                                                       
+    RETURN "".
 END PROCEDURE.
 
 
@@ -575,9 +595,17 @@ PROCEDURE PublishResultSeverityRelative :
       pDescription = REPLACE(REPLACE(pDescription,"~n":U," ":U),CHR(9)," ":U)
       severity = IF pCurrentSeverity=? THEN ActiveSeverity ELSE pCurrentSeverity.
 
+    /* replace fully-qualified path by relative path (relative to propath) */
+    IF pCompilationUnit = pSource THEN
+        ASSIGN  pCompilationUnit = RelativeFileName(pCompilationUnit)
+                RelativeSource   = pCompilationUnit.
+    ELSE
+        ASSIGN  pCompilationUnit = RelativeFileName(pCompilationUnit)
+                RelativeSource   = RelativeFileName(pSource).
+
    RUN GetFilterResult IN hpFilterPlugins (pCompilationUnit,
                                            pSource,
-                                           pSource,
+                                           RelativeSource,
                                            pLineNumber,
                                            pRuleID,
                                            IgnoreAB,
@@ -587,13 +615,28 @@ PROCEDURE PublishResultSeverityRelative :
 
    IF filteredby <> "" THEN RETURN.  /* TODO: send filteredby to outputhandlers */
 
+
+    /* Force the full file name for display */
+    ASSIGN FILE-INFO:FILE-NAME = pCompilationUnit.
+    IF FILE-INFO:FILE-TYPE <> ? THEN
+        ASSIGN pCompilationUnit = FILE-INFO:FULL-PATHNAME.
+    ELSE IF SEARCH(pCompilationUnit) <> ? THEN
+        ASSIGN pCompilationUnit = SEARCH(pCompilationUnit).
+
+    ASSIGN FILE-INFO:FILE-NAME = pSource.
+    IF FILE-INFO:FILE-TYPE <> ? THEN
+        ASSIGN pSource = FILE-INFO:FULL-PATHNAME.
+    ELSE IF SEARCH(pSource) <> ? THEN
+        ASSIGN pSource = SEARCH(pSource).
+
+    /* Publish the result */
    PUBLISH "Prolint_AddResult":U (pCompilationunit,
                                   pSource,
                                   pLineNumber,
                                   REPLACE(pDescription,"~n":U," ":U),
                                   pRuleID,
                                   severity).
-                                                                       
+    RETURN "".
 END PROCEDURE.
 
 

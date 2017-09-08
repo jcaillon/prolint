@@ -6,6 +6,8 @@
    &GLOBAL-DEFINE dlc-version 9
 &ELSEIF INTEGER(ENTRY(1,PROVERSION,'.'))=10 &THEN
    &GLOBAL-DEFINE dlc-version 10
+&ELSEIF INTEGER(ENTRY(1,PROVERSION,'.'))=11 &THEN
+   &GLOBAL-DEFINE dlc-version 11
 &ENDIF
                                
 /* Is this session running in GUI, ChUI or Batch? 
