@@ -646,9 +646,9 @@ PROCEDURE PreAnalyze :
         IF compilerLoopNum > 1 THEN DO:
             PUBLISH "WriteToEd4Windows":U (cErrorMsg). /* just in case ED is listening */
             /*p-SourceFile = DYNAMIC-FUNCTION("RelativeFilename":U IN hLintSuper, p-SourceFile).*/
-            PUBLISH "Prolint_AddResult":U (p-SourceFile, p-SourceFile,"0":U, p-ErrorMessage, "Compiler":U, 9).
+            PUBLISH "Prolint_AddResult":U (p-SourceFile, p-SourceFile,"0":U, p-ErrorMessage, "compiler":U, 9).
             for each tt_Error:
-                publish "Prolint_AddResult":U (p-SourceFile, p-SourceFile,string(tt_Error.LineNumber), tt_Error.ErrorMessage, "Compiler":U, 9).
+                publish "Prolint_AddResult":U (p-SourceFile, p-SourceFile,string(tt_Error.LineNumber), tt_Error.ErrorMessage, "compiler":U, 9).
                 delete tt_Error.
             end.
         END.
@@ -668,7 +668,7 @@ PROCEDURE PreAnalyze :
 
         IF p-ErrorMessage<>"":U THEN DO:
             /*p-SourceFile = DYNAMIC-FUNCTION("RelativeFilename":U IN hLintSuper, p-SourceFile).*/
-            PUBLISH "Prolint_AddResult":U (p-SourceFile, p-SourceFile,"0":U, p-ErrorMessage, "Proparse":U, 0).
+            PUBLISH "Prolint_AddResult":U (p-SourceFile, p-SourceFile,"0":U, p-ErrorMessage, "proparse":U, 0).
         /* These kinds of warnings should be reported to joanju.com */
         END.
         ELSE DO:
