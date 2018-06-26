@@ -106,13 +106,16 @@ DO WHILE TRUE :
                                
       END.
 
+  IF LENGTH(accumInc) + LENGTH(LIneStr) > 32000 THEN 
+    LEAVE.
+      
    IF accumSw AND NOT passSW THEN 
-      accumInc = accumInc + lineStr.
+      accumInc = accumInc + LIneStr NO-ERROR.
    
    IF passSW  THEN passSW = NO.
 
    IF PrevInc < intIncludeLvl THEN  
-      pushStack(TRIM(SUBSTRING(accumInc,1,INDEX(accumInc,".") + 1),"~{")).
+      pushStack(TRIM(SUBSTRING(accumInc,1,INDEX(accumInc,".") + 1),"~{")) NO-ERROR.
    
    IF PrevInc > intIncludeLvl THEN
       pullStack().
