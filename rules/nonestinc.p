@@ -106,7 +106,7 @@ DO WHILE TRUE :
                                
       END.
 
-  IF LENGTH(accumInc) + LENGTH(LIneStr) > 32000 THEN 
+  IF LENGTH(accumInc) + LENGTH(LIneStr) > 31999 THEN 
     LEAVE.
       
    IF accumSw AND NOT passSW THEN 

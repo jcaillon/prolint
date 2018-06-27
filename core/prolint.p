@@ -551,7 +551,10 @@ PROCEDURE LintOneSourceFile :
                     tt_rules.ruleID,
                     tt_rules.pragma,
                     tt_rules.ignoreUIB,
-                    tt_rules.hpRulePersist).
+                    tt_rules.hpRulePersist) NO-ERROR.
+                IF ERROR-STATUS:ERROR THEN DO:
+                    RUN PublishResult (tt_rules.sourcefile, tt_rules.sourcefile, 1, "Prolint error : " + (IF RETURN-VALUE > "" THEN RETURN-VALUE + ". " ELSE "") + (IF ERROR-STATUS:NUM-MESSAGES > 0 THEN ERROR-STATUS:GET-MESSAGE(1) ELSE ""), "alertmessage") NO-ERROR.
+                END.
             END. /* each tt_rules */
             IF NeedProparse AND HasProparse THEN
                 parserReleaseHandle(topnode).
